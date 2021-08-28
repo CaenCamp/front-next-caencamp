@@ -1,9 +1,9 @@
 import Head from 'next/head';
 
-import styles from '../styles/Home.module.css';
-import { Menu } from '../components/Menu';
 import { Favicon } from '../components/Favicon';
 import { Footer } from '../components/Footer';
+import { Menu } from '../components/Menu';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
     return (

@@ -1,10 +1,10 @@
-import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
-import styles from '../../styles/Home.module.css';
 import { Favicon } from '../../components/Favicon';
 import { Footer } from '../../components/Footer';
 import { Menu } from '../../components/Menu';
+import styles from '../../styles/Home.module.css';
 
 const Event = () => {
     const router = useRouter();
