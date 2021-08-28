@@ -19,7 +19,10 @@ export const Menu = ({ styles }) => (
                 <Link href="/annuaire">Les boites du numérique</Link>
             </li>
             <li>
-                <Link href="/about">Les CaenCamp</Link>
+                <Link href="/sponsors">Les sponsors</Link>
+            </li>
+            <li>
+                <Link href="/association">L'association</Link>
             </li>
         </ul>
     </nav>
