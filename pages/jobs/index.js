@@ -21,7 +21,7 @@ export default function Home() {
                 <p className={styles.description}>Liste avec filtres</p>
                 <ul>
                     <li>
-                        <Link href="/jobs/dev-rust">Développeur Rust</Link>
+                        <Link href="/jobs/dev-rust">Développeur Rust disponible</Link>
                     </li>
                 </ul>
             </main>
