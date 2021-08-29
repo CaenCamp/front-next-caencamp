@@ -25,6 +25,7 @@ module.exports = {
         'plugin:unicorn/recommended',
         'plugin:security/recommended',
         'plugin:react-hooks/recommended',
+        'plugin:@next/next/recommended',
     ],
     rules: {
         'no-console': 'error',
