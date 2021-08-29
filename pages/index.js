@@ -40,8 +40,8 @@ export default function Home({ events }) {
                 <Favicon />
             </Head>
 
+            <Menu styles={styles} />
             <main className={styles.main}>
-                <Menu styles={styles} />
                 <h1 className={styles.title}>Bienvenue sur le site des CaenCamp</h1>
 
                 <p className={styles.description}>Présentation</p>

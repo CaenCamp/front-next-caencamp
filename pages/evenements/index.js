@@ -1,12 +1,26 @@
 import Head from 'next/head';
-import Link from 'next/link';
 
+import { EventListItem } from '../../components/events/ListItem';
 import { Favicon } from '../../components/Favicon';
 import { Footer } from '../../components/Footer';
 import { Menu } from '../../components/Menu';
+import { TagList } from '../../components/tags/List';
 import styles from '../../styles/Home.module.css';
 
-export default function Home() {
+const API_URL = process.env.API_URL;
+
+export async function getStaticProps() {
+    const [events, tags] = await Promise.all([
+        fetch(`${API_URL}/events?category=CaenCamp&perPage=100`).then(apiResponse => apiResponse.json()),
+        fetch(`${API_URL}/tags?perPage=100`).then(apiResponse => apiResponse.json()),
+    ]);
+
+    return {
+        props: { events, tags },
+    };
+}
+
+export default function EventList({ events, tags }) {
     return (
         <div className={styles.container}>
             <Head>
@@ -14,16 +28,20 @@ export default function Home() {
                 <Favicon />
             </Head>
 
+            <Menu styles={styles} />
             <main className={styles.main}>
-                <Menu styles={styles} />
                 <h1 className={styles.title}>Les événements</h1>
 
-                <p className={styles.description}>Liste avec filtre par tags</p>
-                <ul>
-                    <li>
-                        <Link href="/evenements/elixir-pourquoi-pas">Elixir ? Pourquoi pas.</Link>
-                    </li>
-                </ul>
+                <h4>Les tags</h4>
+                <TagList tags={tags} />
+
+                <div className={styles.grid}>
+                    <ul>
+                        {events.map(event => (
+                            <EventListItem key={event.identifier} event={event} />
+                        ))}
+                    </ul>
+                </div>
             </main>
 
             <Footer styles={styles} />
