@@ -17,6 +17,7 @@ export async function getStaticProps() {
 
     return {
         props: { events, tags },
+        revalidate: 3600, // In seconds
     };
 }
 
