@@ -23,9 +23,8 @@ export default function Jobs({ jobs }) {
                 <title>Les offres d'emploi dans le Calvados</title>
                 <Favicon />
             </Head>
-
+            <Menu styles={styles} />
             <main className={styles.main}>
-                <Menu styles={styles} />
                 <h1 className={styles.title}>Les offres d'emploi dans le Calvados</h1>
 
                 <p className={styles.description}>Liste avec filtres</p>
