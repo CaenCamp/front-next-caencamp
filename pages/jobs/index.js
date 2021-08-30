@@ -1,12 +1,22 @@
 import Head from 'next/head';
-import Link from 'next/link';
 
 import { Favicon } from '../../components/Favicon';
 import { Footer } from '../../components/Footer';
+import { JobListItem } from '../../components/jobs/ListItem';
 import { Menu } from '../../components/Menu';
 import styles from '../../styles/Home.module.css';
 
-export default function Home() {
+const API_URL = process.env.API_URL;
+
+export async function getStaticProps() {
+    const jobs = await fetch(`${API_URL}/job-postings?perPage=100`).then(apiResponse => apiResponse.json());
+
+    return {
+        props: { jobs },
+    };
+}
+
+export default function Jobs({ jobs }) {
     return (
         <div className={styles.container}>
             <Head>
@@ -20,9 +30,9 @@ export default function Home() {
 
                 <p className={styles.description}>Liste avec filtres</p>
                 <ul>
-                    <li>
-                        <Link href="/jobs/dev-rust">Développeur Rust disponible</Link>
-                    </li>
+                    {jobs.map(job => (
+                        <JobListItem key={job.identifier} job={job} />
+                    ))}
                 </ul>
             </main>
 
