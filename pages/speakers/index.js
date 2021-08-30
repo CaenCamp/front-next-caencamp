@@ -23,9 +23,8 @@ export default function Speakers({ speakers }) {
                 <title>Les speakers des CaenCamp</title>
                 <Favicon />
             </Head>
-
+            <Menu styles={styles} />
             <main className={styles.main}>
-                <Menu styles={styles} />
                 <h1 className={styles.title}>Les speakers</h1>
 
                 <div className={styles.grid}>
