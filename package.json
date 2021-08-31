@@ -15,17 +15,17 @@
     },
     "dependencies": {
         "date-fns": "2.23.0",
-        "next": "11.1.0",
+        "next": "11.1.2",
         "react": "17.0.2",
         "react-dom": "17.0.2"
     },
     "devDependencies": {
-        "@next/eslint-plugin-next": "11.1.0",
+        "@next/eslint-plugin-next": "11.1.2",
         "eslint": "7.32.0",
         "eslint-config-prettier": "8.3.0",
         "eslint-plugin-jsx-a11y": "6.4.1",
-        "eslint-plugin-prettier": "3.4.1",
-        "eslint-plugin-react": "7.24.0",
+        "eslint-plugin-prettier": "4.0.0",
+        "eslint-plugin-react": "7.25.1",
         "eslint-plugin-react-hooks": "4.2.0",
         "eslint-plugin-security": "1.4.0",
         "eslint-plugin-simple-import-sort": "7.0.0",
