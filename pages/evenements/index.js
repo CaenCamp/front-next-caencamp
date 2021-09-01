@@ -1,11 +1,11 @@
 import Head from 'next/head';
 
-import { EventListItem } from '../../components/events/ListItem';
-import { Favicon } from '../../components/Favicon';
-import { Footer } from '../../components/Footer';
-import { Menu } from '../../components/Menu';
-import { TagList } from '../../components/tags/List';
-import styles from '../../styles/Home.module.css';
+import { EventListItem } from '@/components/events/ListItem';
+import { Favicon } from '@/components/Favicon';
+import { Footer } from '@/components/Footer';
+import { Menu } from '@/components/Menu';
+import { TagList } from '@/components/tags/List';
+import styles from '@/styles/Home.module.css';
 
 const API_URL = process.env.API_URL;
 
