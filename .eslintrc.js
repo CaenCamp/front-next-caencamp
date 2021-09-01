@@ -37,6 +37,7 @@ module.exports = {
         'unicorn/filename-case': 'off',
         'unicorn/prevent-abbreviations': 'off',
         'unicorn/no-array-reduce': 'off',
+        'unicorn/prefer-module': 'off',
         'react/no-unescaped-entities': 'off',
         'cypress/no-assigning-return-values': 'error',
         'cypress/no-unnecessary-waiting': 'error',
