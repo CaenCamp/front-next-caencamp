@@ -1,4 +1,4 @@
-name: E2E on Chrome
+name: E2E on Edge
 on:
     pull_request:
         branches:
@@ -6,9 +6,9 @@ on:
         types: [closed]
 jobs:
     cypress-run:
-        runs-on: ubuntu-20.04
+        runs-on: windows-latest
         # let's make sure our tests pass on Chrome browser
-        name: E2E on Chrome
+        name: E2E on Edge
         if: github.event.pull_request.merged == true
         steps:
             - uses: actions/checkout@v2
@@ -21,7 +21,7 @@ jobs:
                   npm run build
             - uses: cypress-io/github-action@v2
               with:
-                  browser: chrome
+                  browser: edge
                   start: npm start
                   # quote the url to be safe against YML parsing surprises
                   wait-on: 'http://localhost:3111'
