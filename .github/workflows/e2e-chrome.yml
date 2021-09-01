@@ -19,4 +19,6 @@ jobs:
                   browser: chrome
                   start: npm start
                   # quote the url to be safe against YML parsing surprises
-                  wait-on: 'http://localhost:8111'
+                  wait-on: 'http://localhost:3111'
+              env:
+                  PORT: 3111
