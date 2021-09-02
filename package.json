@@ -6,6 +6,8 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
+        "test": "jest --watch",
+        "test:ci": "jest",
         "cypress": "cypress open",
         "cypress:headless": "cypress run",
         "e2e": "start-server-and-test start http://localhost:3111 cypress",

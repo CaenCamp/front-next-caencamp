@@ -1,0 +1,16 @@
+name: Unit tests
+on: push
+jobs:
+    jest:
+        runs-on: ubuntu-20.04
+        # let's make sure our tests pass on Chrome browser
+        name: Unit tests with jest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: '14'
+            - name: Install deps and build
+              run: npm install
+            - name: Run tests
+              run: npm run test:ci
