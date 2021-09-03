@@ -2,7 +2,10 @@ module.exports = {
     ci: {
         collect: {
             url: ['http://localhost:3111/'],
-            numberOfRuns: 1,
+            startServerCommand: 'make audit-server',
+            startServerReadyPattern: 'ready - started server on 0.0.0.0:3111, url: http://localhost:3111',
+            startServerReadyTimeout: 120000,
+            numberOfRuns: 5,
             extends: 'lighthouse:no-pwa',
             settings: {
                 preset: 'desktop',
@@ -18,7 +21,12 @@ module.exports = {
             },
         },
         upload: {
-            target: 'temporary-public-storage',
+            target: 'lhci',
+            serverBaseUrl: 'https://lighthouse.caen.camp',
+            basicAuth: {
+                username: process.env.LHCI_SERVER_USER,
+                password: process.env.LHCI_SERVER_PASSWORD,
+            },
         },
     },
 };

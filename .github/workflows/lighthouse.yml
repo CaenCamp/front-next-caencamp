@@ -1,0 +1,22 @@
+name: Lighthouse audit
+on: [push]
+jobs:
+    audit-branch:
+        runs-on: ubuntu-latest
+        name: Test prod build perf
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: '14'
+            - name: Install deps
+              run: |
+                  npm install
+                  npm install -g @lhci/cli@0.8.x
+            - name: Lighthouse audit
+              run: lhci autorun --config ./lighthouserc-ci.js
+              env:
+                  LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+                  LHCI_SERVER_PASSWORD: ${{ secrets.LHCI_SERVER_PASSWORD }}
+                  LHCI_SERVER_USER: ${{ secrets.LHCI_SERVER_USER }}
+                  LHCI_TOKEN: ${{ secrets.LHCI_TOKEN }}

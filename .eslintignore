@@ -1,3 +1,4 @@
 .eslintrc.js
 cypress/integration-exemples/**/*
 cypress/plugins/index.js
+lighthouserc-ci.js
