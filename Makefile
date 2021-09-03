@@ -12,9 +12,12 @@ start: ## Start dev environment en daemon mode
 build: ## Build production application
 	npm run build
 
-# ====================
-# test ===============
-# ====================
+server: ## Start server on propuction build
+	npm run start
+
+# =====================
+# TESTS ===============
+# =====================
 
 test-unit: ## Start unit tests
 	npm run test:ci
@@ -30,3 +33,16 @@ test-e2e-watch: build ## Start cypress tests with GUI
 
 test: test-unit test-e2e ## Start all tests
 	@echo "End of tests"
+
+# =============================================
+# AUDIT (LIGHTHOUSE && GREENFRAME) ============
+# =============================================
+
+audit-server: build ## Run production server on fresh build
+	$(MAKE) --quiet server
+
+lighthouse: ## Start lighthouse audit (needs to have a started audit-server in another tab)
+	LHCI_AUDIT_LOCAL=true lhci autorun
+
+greenframe: ## Start greenframe audit (needs to have a started audit-server in another tab)
+	greenframe analyze

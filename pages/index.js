@@ -37,6 +37,7 @@ export default function Home({ events }) {
         <div className={styles.container}>
             <Head>
                 <title>Les CaenCamp</title>
+                <meta name="description" content="Bienvenue sur le site des CaenCamp" />
                 <Favicon />
             </Head>
 
