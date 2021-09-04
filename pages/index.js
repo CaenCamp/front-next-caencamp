@@ -1,11 +1,11 @@
 import { isPast } from 'date-fns';
 import Head from 'next/head';
+import styles from 'styles/Home.module.css';
 
-import { EventListItem } from '../components/events/ListItem';
-import { Favicon } from '../components/Favicon';
-import { Footer } from '../components/Footer';
-import { Menu } from '../components/Menu';
-import styles from '../styles/Home.module.css';
+import { EventListItem } from '@/components/events/ListItem';
+import { Favicon } from '@/components/Favicon';
+import { Footer } from '@/components/Footer';
+import { Menu } from '@/components/Menu';
 
 const API_URL = process.env.API_URL;
 
@@ -37,6 +37,7 @@ export default function Home({ events }) {
         <div className={styles.container}>
             <Head>
                 <title>Les CaenCamp</title>
+                <meta name="description" content="Bienvenue sur le site des CaenCamp" />
                 <Favicon />
             </Head>
 
@@ -46,7 +47,7 @@ export default function Home({ events }) {
 
                 <p className={styles.description}>Présentation</p>
 
-                {events.upcomming.length > 0 && (
+                {events && events.upcomming.length > 0 && (
                     <div className={styles.grid}>
                         <p>Les prochains events</p>
                         <ul>
@@ -56,13 +57,13 @@ export default function Home({ events }) {
                         </ul>
                     </div>
                 )}
-                {events.upcomming.length === 0 && (
+                {events && events.upcomming.length === 0 && (
                     <div className={styles.grid}>
                         <p>Pas de prochains events programmé</p>
                     </div>
                 )}
 
-                {events.past.length > 0 && (
+                {events && events.past.length > 0 && (
                     <div className={styles.grid}>
                         <p>Les derniers événements</p>
                         <ul>

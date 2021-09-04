@@ -10,8 +10,9 @@ module.exports = {
         browser: true,
         node: true,
         es6: true,
+        'cypress/globals': true,
     },
-    plugins: ['simple-import-sort'],
+    plugins: ['simple-import-sort', 'cypress'],
     settings: {
         react: {
             version: 'detect',
@@ -36,6 +37,12 @@ module.exports = {
         'unicorn/filename-case': 'off',
         'unicorn/prevent-abbreviations': 'off',
         'unicorn/no-array-reduce': 'off',
+        'unicorn/prefer-module': 'off',
         'react/no-unescaped-entities': 'off',
+        'cypress/no-assigning-return-values': 'error',
+        'cypress/no-unnecessary-waiting': 'error',
+        'cypress/assertion-before-screenshot': 'warn',
+        'cypress/no-force': 'warn',
+        'cypress/no-async-tests': 'error',
     },
 };

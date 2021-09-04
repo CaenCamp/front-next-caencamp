@@ -13,15 +13,15 @@
 <!--- Vous pouvez ajouter les étapes des choses à réaliser dans votre PR. -->
 <!--- Cela rendra les choses plus facile surtout si vous avez besoin d'aide pour mener la PR à bout -->
 
--   [ ] step 1.
--   [ ] step 2.
+- [ ] step 1.
+- [ ] step 2.
 
 
 ## Checklist
 
--   [ ] Au besoin, la documentation a-t-elle bien été mise à jours ? (adr, wiki, guide de contribution ...)
--   [ ] La PR est testée
--   [ ] L'issue associée est référencée dans les commentaires pour la clôturer automatiquement au merge
--   [ ] Le label `RFR` a été ajouté indiquant aux autres contributeurs qu'elle est selon vous *mergable*
+- [ ] Au besoin, la documentation a-t-elle bien été mise à jours ? (adr, wiki, guide de contribution ...)
+- [ ] La PR est testée
+- [ ] L'issue associée est référencée dans les commentaires pour la clôturer automatiquement au merge
+- [ ] Le label `RFR` a été ajouté indiquant aux autres contributeurs qu'elle est selon vous *mergable*
 
 <!-- Vous pouvez bien évidement ajouter tous les commentaires vous semblant pertinant pour cette PR ! -->

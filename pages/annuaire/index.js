@@ -1,10 +1,10 @@
 import Head from 'next/head';
 
-import { Favicon } from '../../components/Favicon';
-import { Footer } from '../../components/Footer';
-import { Menu } from '../../components/Menu';
-import { OrganizationListItem } from '../../components/organisations/ListItem';
-import styles from '../../styles/Home.module.css';
+import { Favicon } from '@/components/Favicon';
+import { Footer } from '@/components/Footer';
+import { Menu } from '@/components/Menu';
+import { OrganizationListItem } from '@/components/organisations/ListItem';
+import styles from '@/styles/Home.module.css';
 
 const API_URL = process.env.API_URL;
 

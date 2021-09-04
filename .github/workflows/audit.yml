@@ -1,0 +1,35 @@
+name: Audit Performance
+on:
+    push:
+        branches:
+            - main
+jobs:
+    audit:
+        runs-on: ubuntu-latest
+        name: Lighthouse and Greenframe
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: '15'
+            - name: Install deps
+              run: |
+                  npm install
+                  npm install -g @lhci/cli@0.8.x
+                  curl https://assets.greenframe.io/install.sh | bash
+                  greenframe version
+            - name: Start serveur
+              run: make audit-start-server
+            - name: Lighthouse audit
+              run: lhci autorun --config ./lighthouserc-ci.js
+              env:
+                  LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+                  LHCI_SERVER_PASSWORD: ${{ secrets.LHCI_SERVER_PASSWORD }}
+                  LHCI_SERVER_USER: ${{ secrets.LHCI_SERVER_USER }}
+                  LHCI_TOKEN: ${{ secrets.LHCI_TOKEN }}
+            - name: Greenframe audit
+              run: greenframe analyze
+              env:
+                  GREENFRAME_SECRET_TOKEN: ${{ secrets.GREENFRAME_SECRET_TOKEN }}
+            - name: Stop serveur
+              run: make audit-stop-server
