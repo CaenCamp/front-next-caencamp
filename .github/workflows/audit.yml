@@ -22,5 +22,9 @@ jobs:
                   LHCI_SERVER_PASSWORD: ${{ secrets.LHCI_SERVER_PASSWORD }}
                   LHCI_SERVER_USER: ${{ secrets.LHCI_SERVER_USER }}
                   LHCI_TOKEN: ${{ secrets.LHCI_TOKEN }}
+            - name: Greenframe audit
+              run: reenframe analyze
+              env:
+                  GREENFRAME_SECRET_TOKEN: ${{ secrets.GREENFRAME_SECRET_TOKEN }}
             - name: Stop serveur
               run: make audit-stop-server

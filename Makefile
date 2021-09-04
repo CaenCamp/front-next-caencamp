@@ -1,4 +1,4 @@
-.PHONY: install start stop logs test
+.PHONY: install start stop logs test lighthouse greenframe
 
 help: # Display available commands
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
@@ -38,7 +38,7 @@ test: test-unit test-e2e ## Start all tests
 # AUDIT (LIGHTHOUSE && GREENFRAME) ============
 # =============================================
 
-audit-start-server: build ## Run production server in container
+audit-start-server: build ## Run production server in container for audit
 	docker-compose -p caencamp-audit up -d
 
 audit-stop-server: ## Stop production server in container

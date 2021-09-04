@@ -1,0 +1,6 @@
+scenario: './greenframe/scenario.js'
+baseURL: 'http://localhost:3111'
+threshold: 0.05
+projectName: CaenCamp-Next
+containers:
+    - 'nextjs-node'
