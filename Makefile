@@ -38,8 +38,11 @@ test: test-unit test-e2e ## Start all tests
 # AUDIT (LIGHTHOUSE && GREENFRAME) ============
 # =============================================
 
-audit-server: build ## Run production server on fresh build
-	$(MAKE) --quiet server
+audit-start-server: build ## Run production server in container
+	docker-compose -p caencamp-audit up -d
+
+audit-stop-server: ## Stop production server in container
+	docker-compose -p caencamp-audit down
 
 lighthouse: ## Start lighthouse audit (needs to have a started audit-server in another tab)
 	LHCI_AUDIT_LOCAL=true lhci autorun
