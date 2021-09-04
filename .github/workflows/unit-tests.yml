@@ -4,7 +4,7 @@ jobs:
     jest:
         runs-on: ubuntu-20.04
         # let's make sure our tests pass on Chrome browser
-        name: Unit tests with jest
+        name: react components
         steps:
             - uses: actions/checkout@v2
             - uses: actions/setup-node@v2
