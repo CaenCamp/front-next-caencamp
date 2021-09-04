@@ -1,5 +1,8 @@
 name: Audit Performance
-on: [push]
+on:
+    push:
+        branches:
+            - main
 jobs:
     audit:
         runs-on: ubuntu-latest

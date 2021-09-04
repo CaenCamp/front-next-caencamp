@@ -1,9 +1,8 @@
 name: E2E on Firefox
 on:
-    pull_request:
+    push:
         branches:
             - main
-        types: [closed]
 jobs:
     cypress-run:
         runs-on: ubuntu-latest

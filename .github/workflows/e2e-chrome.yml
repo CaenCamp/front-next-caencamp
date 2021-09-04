@@ -1,15 +1,10 @@
 name: E2E on Chrome
-on:
-    pull_request:
-        branches:
-            - main
-        types: [closed]
+on: push
 jobs:
     cypress-run:
         runs-on: ubuntu-20.04
         # let's make sure our tests pass on Chrome browser
         name: E2E on Chrome
-        if: github.event.pull_request.merged == true
         steps:
             - uses: actions/checkout@v2
             - uses: actions/setup-node@v2

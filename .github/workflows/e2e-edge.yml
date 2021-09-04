@@ -1,15 +1,13 @@
 name: E2E on Edge
 on:
-    pull_request:
+    push:
         branches:
             - main
-        types: [closed]
 jobs:
     cypress-run:
         runs-on: windows-latest
         # let's make sure our tests pass on Chrome browser
         name: E2E on Edge
-        if: github.event.pull_request.merged == true
         steps:
             - uses: actions/checkout@v2
             - uses: actions/setup-node@v2
