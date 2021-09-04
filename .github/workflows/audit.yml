@@ -1,18 +1,20 @@
-name: Lighthouse audit
+name: Audit Performance
 on: [push]
 jobs:
-    audit-branch:
+    audit:
         runs-on: ubuntu-latest
-        name: Test prod build perf
+        name: Lighthouse and Greenframe
         steps:
             - uses: actions/checkout@v2
             - uses: actions/setup-node@v2
               with:
-                  node-version: '14'
+                  node-version: '15'
             - name: Install deps
               run: |
                   npm install
                   npm install -g @lhci/cli@0.8.x
+            - name: Start serveur
+              run: make audit-start-server
             - name: Lighthouse audit
               run: lhci autorun --config ./lighthouserc-ci.js
               env:
@@ -20,3 +22,5 @@ jobs:
                   LHCI_SERVER_PASSWORD: ${{ secrets.LHCI_SERVER_PASSWORD }}
                   LHCI_SERVER_USER: ${{ secrets.LHCI_SERVER_USER }}
                   LHCI_TOKEN: ${{ secrets.LHCI_TOKEN }}
+            - name: Stop serveur
+              run: make audit-stop-server
