@@ -7,7 +7,7 @@ jobs:
     cypress-run:
         runs-on: ubuntu-latest
         container:
-            image: cypress/browsers:node12.16.1-chrome80-ff73
+            image: cypress/browsers:node14.17.0-chrome88-ff89
             options: --user 1001
         name: E2E on Firefox
         steps:
