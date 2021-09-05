@@ -1,38 +1,34 @@
-# Template pour les projets des Caen.Camp.s
+# Site web du CaenCamp (version Next.js)
 
-<!-- LES BADGES
-![Tests](https://github.com/CaenCamp/api-caencamp/workflows/phpunit/badge.svg?branch=main) ![Top language](https://img.shields.io/github/languages/top/CaenCamp/api-caencamp.svg) ![Contributors](https://img.shields.io/github/contributors/CaenCamp/api-caencamp.svg) ![License](https://img.shields.io/github/license/CaenCamp/api-caencamp.svg) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg) -->
+[![Audit de performance](https://github.com/CaenCamp/front-next-caencamp/actions/workflows/audit.yml/badge.svg?branch=main)](https://github.com/CaenCamp/front-next-caencamp/actions/workflows/audit.yml) [![Tests unitaires](https://github.com/CaenCamp/front-next-caencamp/actions/workflows/unit-tests.yml/badge.svg?branch=main)](https://github.com/CaenCamp/front-next-caencamp/actions/workflows/unit-tests.yml) [![Tests d'intégration sous Firefox](https://github.com/CaenCamp/front-next-caencamp/actions/workflows/e2e-firefox.yml/badge.svg?branch=main)](https://github.com/CaenCamp/front-next-caencamp/actions/workflows/e2e-firefox.yml) ![Langages](https://img.shields.io/github/languages/top/CaenCamp/front-next-caencamp.svg) ![Contributeurs](https://img.shields.io/github/contributors/CaenCamp/front-next-caencamp.svg) ![Licence](https://img.shields.io/github/license/CaenCamp/front-next-caencamp.svg) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-<!-- Une description succinct mais motivante du projet. -->
+Nous avons longtemps utilisé [Gatsby](https://www.gatsbyjs.com/) pour gérer [le site du CaenCamp](https://github.com/CaenCamp/new-website). Mais force est de constater que l'utilisation de Gatsby était une porte d'entrée complexe pour des personnes novices et que maintenir les versions du système et des plug-ins une sinécure.
 
-Ce dépôt peut servir de [template](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/) lorsque vous créez un nouveau projet Coding Caen.Camp.
+De plus, nous souhaitions ouvrir plus largement ouvrir les contenus du CaenCamp et l'utilisation du markdown était pour cela limitant.
 
-![Utiliser un template de projet](https://github.blog/wp-content/uploads/2019/06/repository-template.gif?w=1024&resize=1024%2C512)
+Nous avons donc basculé les contenus dans une base de données postgreSQL et les avons exposés publiquement via une [API Rest](https://api.caen.camp/documentation).
+
+Ce projet a donc pour objectif d'exposer les contenus disponibles depuis l'API du CaenCamp sur le web :) Et pour cette nouvelle version du site, nous avons choisi d'utiliser [Next.js](https://nextjs.org/).
 
 ## Démarrage rapide
 
-Une description rapide des [pré-requis](./docs/CONTRIBUTING.md#lenvironnement-de-développement) sur l'environnement local permettant de lancer un `make install`.
+### Pré-requis
 
-Le `Makefile` devra toujours comporter au moins les recettes suivantes :
+Vous devez avoir [Node.js](https://nodejs.org/en/) en version 14 ([LTS](https://nodejs.org/en/about/releases/)) au minimum.
 
-- help
-- install
-- start
-- test
-
-Vous trouverez plus d'informations sur les `Makefile` sur le [guide des Coding Caen.Camp](https://github.com/CaenCamp/coding-caen-camp/blob/master/formalisme.md#le-makefile).
+### Installation
 
 ```bash
 make install
 ```
 
-et lancer le projet avec :
+### Lancer le projet
 
 ```bash
 make start
 ```
 
-Le projet est alors disponible sur <http://localhost:xxxx>
+Le projet est alors disponible sur <http://localhost:3000>
 
 ## Participer au projet
 
@@ -40,8 +36,8 @@ Vous souhaitez participer ? Merci à vous :+1:
 
 Et c’est très simple :
 
--   Si vous ne savez pas par où commencer, vous pouvez jeter un coup d’œil aux [**issues**](https://github.com/CaenCamp/api-caencamp/issues).
--   Voir les cartes des fonctionnalités à développer sur [**tableau Kanban**](https://github.com/orgs/CaenCamp/projects/2) du projet.
+-   Si vous ne savez pas par où commencer, vous pouvez jeter un coup d’œil aux [**issues**](https://github.com/CaenCamp/front-next-caencamp/issues).
+-   Voir les cartes des fonctionnalités à développer sur [**tableau Kanban**](https://github.com/CaenCamp/front-next-caencamp/projects/1) du projet.
 -   Une fois que vous savez quoi faire, vous pouvez consulter le [**guide du contributeur**](./docs/CONTRIBUTING.md) pour vous lancer.
 
 Et si vous ne trouvez toujours pas quoi faire dans les issues existantes et/ou que vous avez d’autres idées, n’hésitez pas à créer une nouvelle issue.
@@ -53,11 +49,11 @@ Certes, le [code et ses tests sont la meilleur documentation](https://martinfowl
 Pour autant, le code ne fait pas tous le projet. Vous trouverez donc, en plus de code, des informations sur le projet dans :
 
 - [le guide du contributeur](./docs/CONTRIBUTING.md)
-- [le wiki du projet](https://github.com/CaenCamp/api-caencamp/wiki)
+- [le wiki du projet](https://github.com/CaenCamp/front-next-caencamp/wiki)
 - [les ADR.s (notes sur les décisions d'architecture)](./docs/adr/README.md)
 
 Si vous ne savez pas trop comment participer à un projet open-source, vous pouvez aussi jeter un oeil sur notre ["Petit guide de participation aux projets des CaenCamp.s pour ceux qui ne saurait pas trop par où commencer."](https://github.com/CaenCamp/coding-caen-camp)
 
 ## License
 
-Les projets des Coding Caen.Camp.s sont sous license [GNU GPLv3](LICENSE)
+Les projets du Coding CaenCamp sont sous license [GNU GPLv3](LICENSE)

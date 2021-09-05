@@ -1,20 +1,23 @@
 - [Contribuer au projet](#contribuer-au-projet)
   - [Code de conduite](#code-de-conduite)
   - [Qu’est ce que je peux faire](#quest-ce-que-je-peux-faire)
-    - [Rapporter des bugs](#rapporter-des-bugs)
-    - [Suggérer des améliorations ou de nouvelles fonctionnalités](#suggérer-des-améliorations-ou-de-nouvelles-fonctionnalités)
-    - [Signaler des manques dans la documentation](#signaler-des-manques-dans-la-documentation)
-    - [Contribuer au code](#contribuer-au-code)
+    - [Rapporter des bugs :bug:](#rapporter-des-bugs-bug)
+    - [Suggérer des améliorations ou de nouvelles fonctionnalités :heart:](#suggérer-des-améliorations-ou-de-nouvelles-fonctionnalités-heart)
+    - [Signaler des manques dans la documentation :blue_book:](#signaler-des-manques-dans-la-documentation-blue_book)
+    - [Contribuer au code :seedling:](#contribuer-au-code-seedling)
   - [L'environnement de développement](#lenvironnement-de-développement)
-    - [Prérequis](#prérequis)
+    - [Pré-requis](#pré-requis)
+    - [Installation](#installation)
+    - [Lancer le projet](#lancer-le-projet)
     - [L’organisation du code](#lorganisation-du-code)
-    - [Installer le projet](#installer-le-projet)
-    - [Démarrer le projet](#démarrer-le-projet)
   - [La convention de codage (coding style)](#la-convention-de-codage-coding-style)
   - [La documentation](#la-documentation)
     - [Les ADR.s](#les-adrs)
     - [Le wiki de Github](#le-wiki-de-github)
   - [Les tests](#les-tests)
+    - [Les tests unitaires](#les-tests-unitaires)
+    - [Les tests e2e (Cypress)](#les-tests-e2e-cypress)
+    - [L'intégration continue](#lintégration-continue)
   - [Les bonnes pratiques](#les-bonnes-pratiques)
     - [Faire une Pull request](#faire-une-pull-request)
     - [le git flow](#le-git-flow)
@@ -59,25 +62,31 @@ Et d'ailleurs n'hésitez pas à traiter cette issue en proposant un PR améliora
 
 Quelle que soit votre type d’implication, ce peut-être une bonne chose que d’installer le projet sur votre machine pour pouvoir visualiser votre contribution avant de la proposer sur Github.
 
-### Prérequis
+### Pré-requis
 
-<!-- Décrire ce qui doit-être disponible sur un environnement de développement afin de pouvoir installer le projet et le lancer en local -->
+Vous devez avoir [Node.js](https://nodejs.org/en/) en version 14 ([LTS](https://nodejs.org/en/about/releases/)) au minimum.
+
+### Installation
+
+```bash
+make install
+```
+
+### Lancer le projet
+
+```bash
+make start
+```
+
+Le projet est alors disponible sur <http://localhost:3000>
 
 ### L’organisation du code
 
-<!-- Description de l'organisation du code si cela vous semble utile. C'est souvent un plus dans la cas de monorepo ... -->
-
-### Installer le projet
-
-<!-- Les étapes nécessaires à l'installation du projet -->
-
-### Démarrer le projet
-
-<!-- Comment lancer le projet en locale -->
+Le projet est basé sur Next.js qui impose [son propre formalisme](https://nextjs.org/docs/getting-started).
 
 ## La convention de codage (coding style)
 
-<!-- Décrire les conventions de code du projet, et les outils de linting éventuels -->
+Nous utilisons eslint et prettier pour unifié le style du code sur le projet.
 
 ## La documentation
 
@@ -103,7 +112,11 @@ Nous suggérons donc d'utiliser le wiki pour y noter tous les *tips*, guides, re
 
 Afin de faciliter l’intégration (le merge) de vos PR, surtout si elles ajoutent ou modifient du code, celles-ci devront contenir les tests couvrant vos propositions.
 
-<!-- Décrire les outils de tests utilisés. -->
+### Les tests unitaires
+
+### Les tests e2e (Cypress)
+
+### L'intégration continue
 
 Les tests sont lancés sur la plateforme d’intégration continue de Github via les [Github actions](https://github.com/features/actions).
 
