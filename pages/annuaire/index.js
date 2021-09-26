@@ -8,7 +8,7 @@ import styles from '@/styles/Home.module.css';
 
 const API_URL = process.env.API_URL;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const organizations = await fetch(`${API_URL}/organizations?perPage=100`).then(apiResponse => apiResponse.json());
 
     return {

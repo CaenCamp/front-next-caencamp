@@ -29,6 +29,7 @@ export async function getStaticProps({ params: { uuid } }) {
 
     return {
         props: { job },
+        revalidate: 600, // In seconds
     };
 }
 
