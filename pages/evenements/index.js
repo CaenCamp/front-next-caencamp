@@ -36,13 +36,9 @@ export default function EventList({ events, tags }) {
                 <h4>Les tags</h4>
                 <TagList tags={tags} />
 
-                <div className={styles.grid}>
-                    <ul>
-                        {events.map(event => (
-                            <EventListItem key={event.identifier} event={event} />
-                        ))}
-                    </ul>
-                </div>
+                {events.map(event => (
+                    <EventListItem key={event.identifier} event={event} />
+                ))}
             </main>
 
             <Footer styles={styles} />

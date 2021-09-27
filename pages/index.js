@@ -2,6 +2,7 @@ import { isPast } from 'date-fns';
 import Head from 'next/head';
 import styles from 'styles/Home.module.css';
 
+import CaenCampResume from '@/components/CaenCampResume';
 import { EventListItem } from '@/components/events/ListItem';
 import { Favicon } from '@/components/Favicon';
 import { Footer } from '@/components/Footer';
@@ -37,41 +38,30 @@ export default function Home({ events }) {
         <div className={styles.container}>
             <Head>
                 <title>Les CaenCamp</title>
-                <meta name="description" content="Bienvenue sur le site des CaenCamp" />
+                <meta name="description" content="Bienvenue sur le site du CaenCamp" />
                 <Favicon />
             </Head>
 
             <Menu styles={styles} />
             <main className={styles.main}>
-                <h1 className={styles.title}>Bienvenue sur le site des CaenCamp</h1>
-
-                <p className={styles.description}>Présentation</p>
-
+                <h1 className={styles.title}>Bienvenue sur le site du CaenCamp</h1>
+                <CaenCampResume className={styles.description} />
                 {events && events.upcomming.length > 0 && (
-                    <div className={styles.grid}>
-                        <p>Les prochains events</p>
-                        <ul>
-                            {events.upcomming.map(event => (
-                                <EventListItem key={event.identifier} event={event} />
-                            ))}
-                        </ul>
-                    </div>
+                    <>
+                        <h2 className={styles.subtitle}>Les prochains événements</h2>
+                        {events.upcomming.map(event => (
+                            <EventListItem key={event.identifier} event={event} />
+                        ))}
+                    </>
                 )}
-                {events && events.upcomming.length === 0 && (
-                    <div className={styles.grid}>
-                        <p>Pas de prochains events programmé</p>
-                    </div>
-                )}
-
+                {events && events.upcomming.length === 0 && <p>Pas d'événement programmé pour le moment</p>}
                 {events && events.past.length > 0 && (
-                    <div className={styles.grid}>
-                        <p>Les derniers événements</p>
-                        <ul>
-                            {events.past.slice(0, 2).map(event => (
-                                <EventListItem key={event.identifier} event={event} />
-                            ))}
-                        </ul>
-                    </div>
+                    <>
+                        <h2 className={styles.subtitle}>Les derniers événements</h2>
+                        {events.past.slice(0, 2).map(event => (
+                            <EventListItem key={event.identifier} event={event} />
+                        ))}
+                    </>
                 )}
             </main>
 

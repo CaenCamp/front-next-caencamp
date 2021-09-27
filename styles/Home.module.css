@@ -22,7 +22,7 @@
 }
 
 .main {
-    padding: 5rem 0;
+    padding: 1rem 0;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -64,6 +64,13 @@
     margin: 0;
     line-height: 1.15;
     font-size: 4rem;
+}
+
+.subtitle {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 2rem;
+    text-align: center;
 }
 
 .title,
@@ -126,6 +133,16 @@
 
 .logo {
     height: 1em;
+}
+
+.resume {
+    border: 1px solid #837d7d;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 2rem;
+    background-color: #f7efef;
+    align-items: center;
+    width: 80%;
 }
 
 @media (max-width: 600px) {
