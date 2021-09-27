@@ -1,6 +1,5 @@
 import { isPast } from 'date-fns';
 import Head from 'next/head';
-import styles from 'styles/Home.module.css';
 
 import CaenCampResume from '@/components/CaenCampResume';
 import { EventListItem } from '@/components/events/ListItem';
@@ -35,20 +34,20 @@ export async function getStaticProps() {
 
 export default function Home({ events }) {
     return (
-        <div className={styles.container}>
+        <div className="container">
             <Head>
                 <title>Les CaenCamp</title>
                 <meta name="description" content="Bienvenue sur le site du CaenCamp" />
                 <Favicon />
             </Head>
 
-            <Menu styles={styles} />
-            <main className={styles.main}>
-                <h1 className={styles.title}>Bienvenue sur le site du CaenCamp</h1>
-                <CaenCampResume className={styles.description} />
+            <Menu />
+            <main className="main">
+                <h1 className="title">Bienvenue sur le site du CaenCamp</h1>
+                <CaenCampResume className="description" />
                 {events && events.upcomming.length > 0 && (
                     <>
-                        <h2 className={styles.subtitle}>Les prochains événements</h2>
+                        <h2 className="subtitle">Les prochains événements</h2>
                         {events.upcomming.map(event => (
                             <EventListItem key={event.identifier} event={event} />
                         ))}
@@ -57,7 +56,7 @@ export default function Home({ events }) {
                 {events && events.upcomming.length === 0 && <p>Pas d'événement programmé pour le moment</p>}
                 {events && events.past.length > 0 && (
                     <>
-                        <h2 className={styles.subtitle}>Les derniers événements</h2>
+                        <h2 className="subtitle">Les derniers événements</h2>
                         {events.past.slice(0, 2).map(event => (
                             <EventListItem key={event.identifier} event={event} />
                         ))}
@@ -65,7 +64,7 @@ export default function Home({ events }) {
                 )}
             </main>
 
-            <Footer styles={styles} />
+            <Footer />
         </div>
     );
 }

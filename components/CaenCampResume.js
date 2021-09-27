@@ -1,7 +1,5 @@
-import styles from '../styles/Home.module.css';
-
 const Resume = () => (
-    <div className={styles.resume}>
+    <div className="resume">
         <p>
             Le CaenCamp est un collectif ouvert à <strong>tous.tes les développeur.euses</strong> du Calvados, que ces
             personnes soient juniors, séniores, professionnelles, étudiantes ou juste curieuses.

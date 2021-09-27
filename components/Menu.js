@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
-export const Menu = ({ styles }) => (
+export const Menu = () => (
     <nav>
-        <ul className={styles.nav}>
+        <ul className="nav">
             <li>
                 <Link href="/">Accueil</Link>
             </li>

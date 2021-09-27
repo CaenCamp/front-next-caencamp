@@ -1,8 +1,6 @@
 import { format } from 'date-fns';
 import Link from 'next/link';
 
-import styles from '../../styles/Event.module.css';
-
 const SpeakerList = ({ speakers }) => (
     <>
         {speakers.map(speaker => (
@@ -14,15 +12,15 @@ const SpeakerList = ({ speakers }) => (
 );
 
 export const EventListItem = ({ event }) => (
-    <div className={styles.itemContainer}>
-        <div className={styles.talks}>
+    <div className="itemContainer">
+        <div className="talks">
             {event.workPerformed.map(talk => (
-                <div className={styles.talk} key={talk.identifier}>
-                    <h3 className={styles.title}>
+                <div className="talk" key={talk.identifier}>
+                    <h3 className="title">
                         <Link href={`/evenements/${event.identifier}`}>{talk.name}</Link>
                     </h3>
-                    <p className={styles.description}>{talk.abstract}</p>
-                    <div className={styles.details}>
+                    <p className="description">{talk.abstract}</p>
+                    <div className="details">
                         <span>
                             Speaker.s: <SpeakerList speakers={talk.maintainers} />
                         </span>
@@ -31,7 +29,7 @@ export const EventListItem = ({ event }) => (
                 </div>
             ))}
         </div>
-        <div className={styles.agenda}>
+        <div className="agenda">
             <span>#{event.number}</span>
             <span>{format(new Date(event.startDate), 'dd/MM/yyyy')}</span>
             <span>{event.location.name}</span>

@@ -4,7 +4,6 @@ import { Favicon } from '@/components/Favicon';
 import { Footer } from '@/components/Footer';
 import { Menu } from '@/components/Menu';
 import { OrganizationListItem } from '@/components/organisations/ListItem';
-import styles from '@/styles/Home.module.css';
 
 const API_URL = process.env.API_URL;
 
@@ -18,16 +17,16 @@ export async function getServerSideProps() {
 
 export default function Organizations({ organizations }) {
     return (
-        <div className={styles.container}>
+        <div className="container">
             <Head>
                 <title>Les stuctures liées au numérique dans le Calvados</title>
                 <Favicon />
             </Head>
-            <Menu styles={styles} />
-            <main className={styles.main}>
-                <h1 className={styles.title}>Les stuctures liées au numérique dans le Calvados</h1>
+            <Menu />
+            <main className="main">
+                <h1 className="title">Les stuctures liées au numérique dans le Calvados</h1>
 
-                <p className={styles.description}>Liste avec filtres</p>
+                <p className="description">Liste avec filtres</p>
                 <ul>
                     {organizations.map(organization => (
                         <OrganizationListItem key={organization.identifier} organization={organization} />
@@ -35,7 +34,7 @@ export default function Organizations({ organizations }) {
                 </ul>
             </main>
 
-            <Footer styles={styles} />
+            <Footer />
         </div>
     );
 }

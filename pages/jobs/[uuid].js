@@ -4,7 +4,6 @@ import { Favicon } from '@/components/Favicon';
 import { Footer } from '@/components/Footer';
 import { JobPage } from '@/components/jobs/Page';
 import { Menu } from '@/components/Menu';
-import styles from '@/styles/Home.module.css';
 
 const API_URL = process.env.API_URL;
 
@@ -35,15 +34,15 @@ export async function getStaticProps({ params: { uuid } }) {
 
 const Event = ({ job = {} }) => {
     return (
-        <div className={styles.container}>
+        <div className="container">
             <Head>
                 <title>{job.title} - CaenCamp</title>
                 <Favicon />
             </Head>
-            <Menu styles={styles} />
-            <JobPage styles={styles} job={job} />
+            <Menu />
+            <JobPage job={job} />
 
-            <Footer styles={styles} />
+            <Footer />
         </div>
     );
 };

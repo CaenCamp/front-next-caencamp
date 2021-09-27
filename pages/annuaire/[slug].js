@@ -4,7 +4,6 @@ import { Favicon } from '@/components/Favicon';
 import { Footer } from '@/components/Footer';
 import { Menu } from '@/components/Menu';
 import { OrganizationPage } from '@/components/organisations/Page';
-import styles from '@/styles/Home.module.css';
 
 const API_URL = process.env.API_URL;
 
@@ -34,15 +33,15 @@ export async function getStaticProps({ params: { slug } }) {
 
 const Organization = ({ organization = {} }) => {
     return (
-        <div className={styles.container}>
+        <div className="container">
             <Head>
                 <title>{organization.name} - CaenCamp</title>
                 <Favicon />
             </Head>
-            <Menu styles={styles} />
-            <OrganizationPage styles={styles} organization={organization} />
+            <Menu />
+            <OrganizationPage organization={organization} />
 
-            <Footer styles={styles} />
+            <Footer />
         </div>
     );
 };

@@ -1,7 +1,5 @@
-import styles from '../styles/Home.module.css';
-
 const Resume = () => (
-    <div className={styles.resume}>
+    <div className="resume">
         <p>
             Parallèlement aux rencontres autour des présentations techniques du CaenCamp, certains membres du collectif
             ont souhaité se retrouver pour aborder plus directement leur activité quotidienne : écrire du code.

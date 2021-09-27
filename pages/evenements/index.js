@@ -5,7 +5,6 @@ import { Favicon } from '@/components/Favicon';
 import { Footer } from '@/components/Footer';
 import { Menu } from '@/components/Menu';
 import { TagList } from '@/components/tags/List';
-import styles from '@/styles/Home.module.css';
 
 const API_URL = process.env.API_URL;
 
@@ -23,15 +22,15 @@ export async function getStaticProps() {
 
 export default function EventList({ events, tags }) {
     return (
-        <div className={styles.container}>
+        <div className="container">
             <Head>
                 <title>Les événements CaenCamp</title>
                 <Favicon />
             </Head>
 
-            <Menu styles={styles} />
-            <main className={styles.main}>
-                <h1 className={styles.title}>Les événements</h1>
+            <Menu />
+            <main className="main">
+                <h1 className="title">Les événements</h1>
 
                 <h4>Les tags</h4>
                 <TagList tags={tags} />
@@ -41,7 +40,7 @@ export default function EventList({ events, tags }) {
                 ))}
             </main>
 
-            <Footer styles={styles} />
+            <Footer />
         </div>
     );
 }

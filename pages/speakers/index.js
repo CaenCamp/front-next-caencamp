@@ -4,7 +4,6 @@ import { Favicon } from '@/components/Favicon';
 import { Footer } from '@/components/Footer';
 import { Menu } from '@/components/Menu';
 import { SpeakerListItem } from '@/components/speakers/ListItem';
-import styles from '@/styles/Home.module.css';
 
 const API_URL = process.env.API_URL;
 
@@ -18,16 +17,16 @@ export async function getStaticProps() {
 
 export default function Speakers({ speakers }) {
     return (
-        <div className={styles.container}>
+        <div className="container">
             <Head>
                 <title>Les speakers des CaenCamp</title>
                 <Favicon />
             </Head>
-            <Menu styles={styles} />
-            <main className={styles.main}>
-                <h1 className={styles.title}>Les speakers</h1>
+            <Menu />
+            <main className="main">
+                <h1 className="title">Les speakers</h1>
 
-                <div className={styles.grid}>
+                <div className="grid">
                     <ul>
                         {speakers.map(speaker => (
                             <SpeakerListItem key={speaker.identifier} speaker={speaker} />
@@ -36,7 +35,7 @@ export default function Speakers({ speakers }) {
                 </div>
             </main>
 
-            <Footer styles={styles} />
+            <Footer />
         </div>
     );
 }

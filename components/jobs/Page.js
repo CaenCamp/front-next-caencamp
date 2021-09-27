@@ -1,7 +1,7 @@
-export const JobPage = ({ job, styles }) => (
-    <main className={styles.main}>
-        <h1 className={styles.title}>{job.title}</h1>
+export const JobPage = ({ job }) => (
+    <main className="main">
+        <h1 className="title">{job.title}</h1>
 
-        <p className={styles.description}>Détails du poste</p>
+        <p className="description">Détails du poste</p>
     </main>
 );

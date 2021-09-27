@@ -1,7 +1,7 @@
-export const SpeakerPage = ({ speaker, styles }) => (
-    <main className={styles.main}>
-        <h1 className={styles.title}>{speaker.name}</h1>
+export const SpeakerPage = ({ speaker }) => (
+    <main className="main">
+        <h1 className="title">{speaker.name}</h1>
 
-        <p className={styles.description}>Détails du speaker</p>
+        <p className="description">Détails du speaker</p>
     </main>
 );

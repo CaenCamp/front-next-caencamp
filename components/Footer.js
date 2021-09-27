@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
-export const Footer = ({ styles }) => (
-    <footer className={styles.footer}>
+export const Footer = () => (
+    <footer className="footer">
         <p>Le footer</p>
-        <ul className={styles.nav}>
+        <ul className="nav">
             <li>
                 <Link href="/contact">Restons en contact</Link>
             </li>
