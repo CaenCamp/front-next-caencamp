@@ -38,6 +38,7 @@ module.exports = {
         'unicorn/prevent-abbreviations': 'off',
         'unicorn/no-array-reduce': 'off',
         'unicorn/prefer-module': 'off',
+        'unicorn/no-null': 'off',
         'react/no-unescaped-entities': 'off',
         'cypress/no-assigning-return-values': 'error',
         'cypress/no-unnecessary-waiting': 'error',

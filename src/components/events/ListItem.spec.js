@@ -7,25 +7,6 @@ import { ListItem } from './ListItem.stories';
 expect.extend(toHaveNoViolations);
 
 describe('Event List Item', () => {
-    // eslint-disable-next-line no-console
-    const originalError = console.error;
-    // eslint-disable-next-line no-undef
-    beforeAll(() => {
-        // eslint-disable-next-line no-console
-        console.error = (...args) => {
-            if (/Warning.*not wrapped in act/.test(args[0])) {
-                return;
-            }
-            originalError.call(console, ...args);
-        };
-    });
-
-    // eslint-disable-next-line no-undef
-    afterAll(() => {
-        // eslint-disable-next-line no-console
-        console.error = originalError;
-    });
-
     it('should display the event title', () => {
         render(<ListItem {...ListItem.args} />);
 
@@ -34,7 +15,7 @@ describe('Event List Item', () => {
         expect(title).toBeInTheDocument();
     });
 
-    it('should display the speaker name with a link to their profil', () => {
+    it('should display the speakers name with a link to their profil', () => {
         render(<ListItem {...ListItem.args} />);
 
         const fred = screen.getByText('Frédéric Leguedois');
