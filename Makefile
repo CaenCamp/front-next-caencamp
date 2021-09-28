@@ -25,10 +25,10 @@ test-unit: ## Start unit tests
 test-unit-watch: ## Start unit tests in watch
 	npm run test
 
-test-e2e: build ## Start cypress tests
+test-e2e: #build ## Start cypress tests
 	npm run e2e:headless
 
-test-e2e-watch: build ## Start cypress tests with GUI
+test-e2e-watch: #build ## Start cypress tests with GUI
 	npm run e2e
 
 test: test-unit test-e2e ## Start all tests

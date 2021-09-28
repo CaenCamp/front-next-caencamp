@@ -32,12 +32,12 @@ export default function EventList({ events, tags }) {
             <main className="main">
                 <h1 className="title">Les événements</h1>
 
-                <h4>Les tags</h4>
-                <TagList tags={tags} />
-
                 {events.map(event => (
                     <EventListItem key={event.identifier} event={event} />
                 ))}
+
+                <h4>Les tags</h4>
+                <TagList tags={tags} />
             </main>
 
             <Footer />

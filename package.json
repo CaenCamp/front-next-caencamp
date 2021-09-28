@@ -22,6 +22,8 @@
     "*.js": "eslint --cache --fix"
   },
   "dependencies": {
+    "axe-core": "4.3.3",
+    "cypress-axe": "0.13.0",
     "date-fns": "2.24.0",
     "next": "11.1.2",
     "react": "17.0.2",
