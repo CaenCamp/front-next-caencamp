@@ -1,5 +1,5 @@
 module.exports = {
-    stories: ['../components/**/*.stories.js'],
+    stories: ['../src/components/**/*.stories.js'],
     addons: [
         'storybook-addon-next-router',
         '@storybook/addon-links',
