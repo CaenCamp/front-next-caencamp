@@ -14,9 +14,7 @@ export default function Contact() {
             <Menu />
             <main className="main">
                 <h1 className="title">Restons en contact</h1>
-
                 <p className="description">Liste des canaux</p>
-
                 <div className="grid">
                     <p>Newsletter</p>
                     <p> / </p>

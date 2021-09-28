@@ -40,7 +40,6 @@ export default function Home({ events }) {
                 <meta name="description" content="Bienvenue sur le site du CaenCamp" />
                 <Favicon />
             </Head>
-
             <Menu />
             <main className="main">
                 <h1 className="title">Bienvenue sur le site du CaenCamp</h1>
@@ -63,7 +62,6 @@ export default function Home({ events }) {
                     </>
                 )}
             </main>
-
             <Footer />
         </div>
     );

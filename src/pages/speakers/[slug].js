@@ -40,7 +40,6 @@ const Speaker = ({ speaker = {} }) => {
             </Head>
             <Menu />
             <SpeakerPage speaker={speaker} />
-
             <Footer />
         </div>
     );

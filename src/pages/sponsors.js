@@ -14,10 +14,8 @@ export default function Sponsor() {
             <Menu />
             <main className="main">
                 <h1 className="title">Les sponsors</h1>
-
                 <p className="description">Liste des sponsors et structures d'acceuil</p>
             </main>
-
             <Footer />
         </div>
     );

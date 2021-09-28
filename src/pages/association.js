@@ -14,10 +14,8 @@ export default function Association() {
             <Menu />
             <main className="main">
                 <h1 className="title">L'association</h1>
-
                 <p className="description">Pourquoi une asso ? Adhésion</p>
             </main>
-
             <Footer />
         </div>
     );

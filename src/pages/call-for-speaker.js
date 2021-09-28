@@ -14,10 +14,8 @@ export default function CallForSpeaker() {
             <Menu />
             <main className="main">
                 <h1 className="title">Proposer un talk</h1>
-
                 <p className="description">Formulaire</p>
             </main>
-
             <Footer />
         </div>
     );
