@@ -3,9 +3,12 @@
 help: # Display available commands
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-install: ## Install php deps
-	npm install
+init: install ## Init project
+	npm run prepare
 
+install: ## Install JavaScript deps
+	npm install
+	
 start: ## Start dev environment en daemon mode
 	npm run dev
 
