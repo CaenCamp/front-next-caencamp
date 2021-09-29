@@ -1,0 +1,11 @@
+# Optional github repository url, used mainly to generate changelog links
+github = "https://github.com/CaenCamp/front-next-caencamp"
+
+changelog_path = "CHANGELOG.md"
+pre_bump_hooks = []
+post_bump_hooks = []
+authors = [
+    { signature = "Alexis Janvier", username = "alexisjanvier" },
+]
+
+[commit_types]
