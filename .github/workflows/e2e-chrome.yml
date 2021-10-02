@@ -1,5 +1,8 @@
 name: E2E on Chrome
-on: push
+on: 
+    push:
+        paths-ignore:
+            - '**/README.md'
 jobs:
     cypress-run:
         runs-on: ubuntu-20.04

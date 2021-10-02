@@ -3,6 +3,8 @@ on:
     push:
         branches:
             - main
+        paths-ignore:
+            - '**/README.md'
 jobs:
     cypress-run:
         runs-on: ubuntu-latest
