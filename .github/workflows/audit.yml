@@ -1,6 +1,8 @@
 name: Audit Performance
 on:
     push:
+        branches:
+            - main
         paths-ignore:
             - '**/README.md'
 jobs:

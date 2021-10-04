@@ -1,6 +1,8 @@
 name: E2E on Firefox
 on:
     push:
+        branches:
+            - main
         paths-ignore:
             - '**/README.md'
 jobs:
