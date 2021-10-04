@@ -11,6 +11,7 @@
     - [Lancer le projet](#lancer-le-projet)
     - [L’organisation du code](#lorganisation-du-code)
   - [La convention de codage (coding style)](#la-convention-de-codage-coding-style)
+    - [Commits Conventionnels](#commits-conventionnels)
   - [La documentation](#la-documentation)
     - [Les ADR.s](#les-adrs)
     - [Le wiki de Github](#le-wiki-de-github)
@@ -87,6 +88,28 @@ Le projet est basé sur Next.js qui impose [son propre formalisme](https://nextj
 ## La convention de codage (coding style)
 
 Nous utilisons eslint et prettier pour unifié le style du code sur le projet.
+
+### Commits Conventionnels
+
+Nous avons aussi forcé une convention de formatage des messages de commits : le [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+
+Le message du commit doit être structuré comme suit:
+
+* * *
+    <type>[optional scope]: <description>
+
+    [optional body]
+
+    [optional footer(s)]
+* * *
+
+Vous pouvez d'ailleur configurer un template de commit sur le projet en partant du [template d'exemple](../doc/commit.template.txt) présent dans la documentation.
+
+```bash
+git config commit.template doc/commit.template.txt
+```
+
+Nous utilisons un [hook de pre-commit](https://commitlint.js.org/) pour valider le format des messages de commit.
 
 ## La documentation
 
