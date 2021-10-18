@@ -13,15 +13,15 @@ export const Menu = () => (
                     <span className="visuallyhidden">Acceuil du CaenCamp</span>
                 </a>
             </Link>
-            <ul className="clean-list">
-                <li className="top-nav-item">
+            <ul className="clean-list" role="navigation">
+                <li className="active top-nav-item">
                     <Link href="/">
                         <a className="nav-link">Accueil</a>
                     </Link>
                 </li>
                 <li className="top-nav-item">
                     <Link href="/evenements">
-                        <a className="nav-link">Les événement</a>
+                        <a className="nav-link">Les événements</a>
                     </Link>
                 </li>
                 <li className="top-nav-item">
