@@ -4,8 +4,6 @@ import Head from 'next/head';
 import CaenCampResume from '@/components/CaenCampResume';
 import { EventListItem } from '@/components/events/ListItem';
 import { Favicon } from '@/components/Favicon';
-import { Footer } from '@/components/Footer';
-import { Menu } from '@/components/Menu';
 
 const API_URL = process.env.API_URL;
 
@@ -34,13 +32,12 @@ export async function getStaticProps() {
 
 export default function Home({ events }) {
     return (
-        <div className="container">
+        <>
             <Head>
                 <title>Les CaenCamp</title>
                 <meta name="description" content="Bienvenue sur le site du CaenCamp" />
                 <Favicon />
             </Head>
-            <Menu />
             <main className="main">
                 <h1 className="title">Bienvenue sur le site du CaenCamp</h1>
                 <CaenCampResume className="description" />
@@ -62,7 +59,6 @@ export default function Home({ events }) {
                     </>
                 )}
             </main>
-            <Footer />
-        </div>
+        </>
     );
 }
