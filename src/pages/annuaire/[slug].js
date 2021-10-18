@@ -1,8 +1,5 @@
 import Head from 'next/head';
 
-import { Favicon } from '@/components/Favicon';
-import { Footer } from '@/components/Footer';
-import { Menu } from '@/components/Menu';
 import { OrganizationPage } from '@/components/organisations/Page';
 
 const API_URL = process.env.API_URL;
@@ -33,16 +30,12 @@ export async function getStaticProps({ params: { slug } }) {
 
 const Organization = ({ organization = {} }) => {
     return (
-        <div className="container">
+        <>
             <Head>
                 <title>{organization.name} - CaenCamp</title>
-                <Favicon />
             </Head>
-            <Menu />
             <OrganizationPage organization={organization} />
-
-            <Footer />
-        </div>
+        </>
     );
 };
 

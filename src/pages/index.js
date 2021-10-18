@@ -38,27 +38,25 @@ export default function Home({ events }) {
                 <meta name="description" content="Bienvenue sur le site du CaenCamp" />
                 <Favicon />
             </Head>
-            <main className="main">
-                <h1 className="title">Bienvenue sur le site du CaenCamp</h1>
-                <CaenCampResume className="description" />
-                {events && events.upcomming.length > 0 && (
-                    <>
-                        <h2 className="subtitle">Les prochains événements</h2>
-                        {events.upcomming.map(event => (
-                            <EventListItem key={event.identifier} event={event} />
-                        ))}
-                    </>
-                )}
-                {events && events.upcomming.length === 0 && <p>Pas d'événement programmé pour le moment</p>}
-                {events && events.past.length > 0 && (
-                    <>
-                        <h2 className="subtitle">Les derniers événements</h2>
-                        {events.past.slice(0, 2).map(event => (
-                            <EventListItem key={event.identifier} event={event} />
-                        ))}
-                    </>
-                )}
-            </main>
+            <h1 className="title">Bienvenue sur le site du CaenCamp</h1>
+            <CaenCampResume className="description" />
+            {events && events.upcomming.length > 0 && (
+                <>
+                    <h2 className="subtitle">Les prochains événements</h2>
+                    {events.upcomming.map(event => (
+                        <EventListItem key={event.identifier} event={event} />
+                    ))}
+                </>
+            )}
+            {events && events.upcomming.length === 0 && <p>Pas d'événement programmé pour le moment</p>}
+            {events && events.past.length > 0 && (
+                <>
+                    <h2 className="subtitle">Les derniers événements</h2>
+                    {events.past.slice(0, 2).map(event => (
+                        <EventListItem key={event.identifier} event={event} />
+                    ))}
+                </>
+            )}
         </>
     );
 }

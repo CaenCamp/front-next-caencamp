@@ -12,8 +12,11 @@ export const Header = () => (
             <div className="banner__inner l-center">
                 <Image src={betaLogo} className="icon icon--beta" alt="Beta icon" role="img" />
                 <p>
-                    This is a new website. <Link href="https://github.com/w3c/w3c-website">Give feedback</Link> to help
-                    us improve it.
+                    Cette v2 du site du CaenCamp est en cours de réalisation.{' '}
+                    <Link href="https://github.com/CaenCamp/front-next-caencamp">
+                        Toute personne souhaitant participer est la bienvenue
+                    </Link>
+                    .
                 </p>
             </div>
         </div>
