@@ -13,20 +13,10 @@ export const Menu = () => (
                     <span className="visuallyhidden">Acceuil du CaenCamp</span>
                 </a>
             </Link>
-            <ul className="clean-list" role="navigation">
-                <li className="active top-nav-item">
-                    <Link href="/">
-                        <a className="nav-link">Accueil</a>
-                    </Link>
-                </li>
+            <ul className="clean-list">
                 <li className="top-nav-item">
                     <Link href="/evenements">
                         <a className="nav-link">Les événements</a>
-                    </Link>
-                </li>
-                <li className="top-nav-item">
-                    <Link href="/speakers">
-                        <a className="nav-link">Les speakers</a>
                     </Link>
                 </li>
                 <li className="top-nav-item">
@@ -37,11 +27,6 @@ export const Menu = () => (
                 <li className="top-nav-item">
                     <Link href="/annuaire">
                         <a className="nav-link">Les boites du numérique</a>
-                    </Link>
-                </li>
-                <li className="top-nav-item">
-                    <Link href="/sponsors">
-                        <a className="nav-link">Les sponsors</a>
                     </Link>
                 </li>
                 <li className="top-nav-item">
