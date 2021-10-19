@@ -37,7 +37,7 @@ export default function Home({ events }) {
     return (
         <>
             <Head>
-                <title>Les CaenCamp</title>
+                <title>Le CaenCamp</title>
                 <meta name="description" content="Bienvenue sur le site du CaenCamp" />
                 <Favicon />
             </Head>

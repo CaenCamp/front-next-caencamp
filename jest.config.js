@@ -8,11 +8,11 @@ module.exports = {
         '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
 
         // Handle CSS imports (without CSS modules)
-        '^.+\\.(css|sass|scss)$': '<rootDir>/__mocks__/styleMock.js',
+        '^.+\\.(css|sass|scss)$': '<rootDir>/src/__mocks__/styleMock.js',
 
         /* Handle image imports
     https://jestjs.io/docs/webpack#handling-static-assets */
-        '^.+\\.(jpg|jpeg|png|gif|webp|svg)$': '<rootDir>/__mocks__/fileMock.js',
+        '^.+\\.(jpg|jpeg|png|gif|webp|svg)$': '<rootDir>/src/__mocks__/fileMock.js',
     },
     testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/', '<rootDir>/cypress/'],
     testEnvironment: 'jsdom',
