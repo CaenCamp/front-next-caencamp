@@ -10,7 +10,7 @@ export const Footer = () => (
         <div className="l-center">
             <div className="global-footer__links">
                 <div className="l-cluster">
-                    <ul className="clean-list" role="navigation">
+                    <ul className="clean-list">
                         <li>
                             <Link href="/contact">Restons en contact</Link>
                         </li>

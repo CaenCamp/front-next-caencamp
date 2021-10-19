@@ -60,11 +60,7 @@ export default function Home({ events }) {
             <figure className="component component--fifty-fifty">
                 <div className="illustration">
                     <div className="l-frame">
-                        <img
-                            src="/illustrations/undraw_candidate_ubwv.svg"
-                            alt="Prochain événement"
-                            role="presentation"
-                        />
+                        <img src="/illustrations/undraw_candidate_ubwv.svg" alt="Prochain événement" />
                     </div>
                 </div>
                 {events && events.upcomming.length > 0 && (
