@@ -31,6 +31,7 @@ Sass variables.
 Social media colours that might be useful.
 See: https://brandcolors.net/
  */
+
 /*------------------------------------*\
     #Paths
 \*------------------------------------*/
@@ -2111,7 +2112,7 @@ When Font Face Observer has detected that the @font-face files are loaded, then 
 can safely use the web fonts instead of the system fonts.
  */
 .fonts-loaded body {
-    font-family: Arial, Verdana, 'Trebuchet MS', Geneva, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 /*------------------------------------*\
@@ -2590,7 +2591,7 @@ so that either of these properties is applied instead.
 @media print {
     #archive-banner {
         border: solid 2.25pt;
-        font-family: Arial, Verdana, 'Trebuchet MS', Geneva, sans-serif;
+        font-family: 'Trebuchet MS', Geneva, sans-serif;
         margin: 1cm;
         padding: 8pt;
         position: relative;

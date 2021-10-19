@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import { EventListItem2 } from '@/components/events/ListItem';
+import { EventListItem } from '@/components/events/ListItem';
 import { TagList } from '@/components/tags/List';
 
 const API_URL = process.env.API_URL;
@@ -34,7 +34,7 @@ export default function EventList({ events, tags }) {
             </div>
             <div className="event-list">
                 {events.map(event => (
-                    <EventListItem2 key={event.identifier} event={event} />
+                    <EventListItem key={event.identifier} event={event} />
                 ))}
             </div>
         </>

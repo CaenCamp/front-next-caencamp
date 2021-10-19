@@ -1,5 +1,5 @@
 export const JobPage = ({ job }) => (
-    <div className="content">
+    <div className="content post">
         <article>
             <h1>{job.title}</h1>
             <div className="sub-head">

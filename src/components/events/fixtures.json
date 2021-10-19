@@ -1,0 +1,227 @@
+[
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "@id": "a-la-decouverte-des-tests-automatiques",
+        "identifier": "a-la-decouverte-des-tests-automatiques",
+        "url": "http://localhost:3001/api/events/a-la-decouverte-des-tests-automatiques",
+        "name": "A la découverte des tests automatiques",
+        "category": "CaenCamp",
+        "number": 49,
+        "startDate": "2020-09-23T16:30:00Z",
+        "endDate": "1970-01-01T00:00:00Z",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "isAccessibleForFree": true,
+        "description": "Les tests (automatiques, de non régression, unitaires) sont de plus\nen plus répandus comme bonne pratique de programmation. Pour autant\nlorsque nous sommes éloignés du sujet, il peut sembler abstrait. A\nquoi cela peut-il bien servir ? Est-ce vraiment utile dans mon\ncontexte ? Comment les mettre en place ?\n\nAprès un rappel des enjeux liés aux tests automatiques, nous vous\nproposons d'illustrer avec pragmatisme la mise en place de ces\nderniers, dans du code source, sans aucun outil spécifique autre que\nvotre langage de programmation, et à pas à pas, vous donner les\nmoyens de les mettre en œuvre.\n\nACTUALITÉ OBLIGE, NOUS NE POURRONS ACCUEILLIR QUE 20 PARTICIPANTS\nMAXIMUM POUR CETTE ÉDITION #49 DE REPRISE DES CAENCAMP.\n",
+        "descriptionHtml": "<p>Les tests (automatiques, de non régression, unitaires) sont de plus en plus répandus comme bonne pratique de programmation. Pour autant lorsque nous sommes éloignés du sujet, il peut sembler abstrait. A quoi cela peut-il bien servir ? Est-ce vraiment utile dans mon contexte ? Comment les mettre en place ?</p>\n<p>Après un rappel des enjeux liés aux tests automatiques, nous vous proposons d'illustrer avec pragmatisme la mise en place de ces derniers, dans du code source, sans aucun outil spécifique autre que votre langage de programmation, et à pas à pas, vous donner les moyens de les mettre en œuvre.</p>\n<p><strong>Actualité oblige, nous ne pourrons accueillir que 20 participants maximum pour cette édition #49 de reprise des CaenCamp.</strong></p>",
+        "disambiguatingDescription": "Les tests sont de plus en plus répandus comme bonne pratique de programmation. A quoi cela peut-il bien servir ? Est-ce vraiment utile dans mon contexte ? Comment les mettre en place ?",
+        "inLanguage": {
+            "@type": "Language",
+            "name": "French"
+        },
+        "image": "https://caen.camp/static/logoFondBlanc-278da657a83902f7d21083ade8e9ce7a.png",
+        "tags": ["devops", "tests"],
+        "hasVideo": true,
+        "meetupId": "273100242",
+        "location": {
+            "@type": "Place",
+            "@id": "le-dome",
+            "identifier": "le-dome",
+            "url": "http://localhost:3001/api/places/le-dome",
+            "name": "Le Dôme",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "3 Esplanade Stéphane Hessel, ",
+                "addressLocality": "Caen",
+                "postalCode": "14000",
+                "addressCountry": "FR"
+            }
+        },
+        "organizer": {
+            "@type": "Organization",
+            "@id": "caencamp",
+            "identifier": "caencamp",
+            "url": "http://localhost:3001/api/organizations/caencamp",
+            "name": "CaenCamp"
+        },
+        "sponsor": null,
+        "workPerformed": [
+            {
+                "@type": "CreativeWork",
+                "@id": "a-la-decouverte-des-tests-automatiques",
+                "identifier": "a-la-decouverte-des-tests-automatiques",
+                "url": "http://localhost:3001/api/creative-works/a-la-decouverte-des-tests-automatiques",
+                "name": "A la découverte des tests automatiques",
+                "format": {
+                    "label": "Regular",
+                    "durationInMinutes": 45
+                },
+                "description": "Les tests (automatiques, de non régression, unitaires) sont de plus en plus répandus comme bonne pratique de programmation. Pour autant lorsque nous sommes éloignés du sujet, il peut sembler abstrait. A quoi cela peut-il bien servir ? Est-ce vraiment utile dans mon contexte ? Comment les mettre en place ?\nAprès un rappel des enjeux liés aux tests automatiques, nous vous proposons d&amp#39;illustrer avec pragmatisme la mise en place de ces derniers, dans du code source, sans aucun outil spécifique autre que votre langage de programmation, et à pas à pas, vous donner les moyens de les mettre en œuvre.\nActualité oblige, nous ne pourrons accueillir que 20 participants maximum pour cette édition #49 de reprise des CaenCamp.\n",
+                "descriptionHtml": "<p>Les tests (automatiques, de non régression, unitaires) sont de plus en plus répandus comme bonne pratique de programmation. Pour autant lorsque nous sommes éloignés du sujet, il peut sembler abstrait. A quoi cela peut-il bien servir ? Est-ce vraiment utile dans mon contexte ? Comment les mettre en place ?</p>\n<p>Après un rappel des enjeux liés aux tests automatiques, nous vous proposons d&#39;illustrer avec pragmatisme la mise en place de ces derniers, dans du code source, sans aucun outil spécifique autre que votre langage de programmation, et à pas à pas, vous donner les moyens de les mettre en œuvre.</p>\n<p><strong>Actualité oblige, nous ne pourrons accueillir que 20 participants maximum pour cette édition #49 de reprise des CaenCamp.</strong></p>\n",
+                "abstract": "Les tests sont de plus en plus répandus comme bonne pratique de programmation. A quoi cela peut-il bien servir ? Est-ce vraiment utile dans mon contexte ? Comment les mettre en place ?",
+                "maintainers": [
+                    {
+                        "@type": "Person",
+                        "@id": "frederic-leguedois",
+                        "identifier": "frederic-leguedois",
+                        "url": "http://localhost:3001/api/speakers/frederic-leguedois",
+                        "name": "Frédéric Leguedois",
+                        "disambiguatingDescription": "Evangéliste Agile, libriste, voire polémiste ;-) Conférencier iconoclaste, directeur du pôle Agile chez @CloudTemple."
+                    },
+                    {
+                        "@type": "Person",
+                        "@id": "julien-anne",
+                        "identifier": "julien-anne",
+                        "url": "http://localhost:3001/api/speakers/julien-anne",
+                        "name": "Julien Anne",
+                        "disambiguatingDescription": "Dév, Agilité, Pair Programming, Ruby On Rails, Debian, Open source, TDD, débutant maker"
+                    }
+                ],
+                "video": "https://youtu.be/46AYdmshkKw"
+            }
+        ],
+        "performers": [
+            {
+                "@type": "Person",
+                "@id": "frederic-leguedois",
+                "identifier": "frederic-leguedois",
+                "url": "http://localhost:3001/api/speakers/frederic-leguedois",
+                "name": "Frédéric Leguedois",
+                "disambiguatingDescription": "Evangéliste Agile, libriste, voire polémiste ;-) Conférencier iconoclaste, directeur du pôle Agile chez @CloudTemple."
+            },
+            {
+                "@type": "Person",
+                "@id": "julien-anne",
+                "identifier": "julien-anne",
+                "url": "http://localhost:3001/api/speakers/julien-anne",
+                "name": "Julien Anne",
+                "disambiguatingDescription": "Dév, Agilité, Pair Programming, Ruby On Rails, Debian, Open source, TDD, débutant maker"
+            }
+        ]
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "@id": "illustrations-responsives",
+        "identifier": "illustrations-responsives",
+        "url": "http://localhost:3001/api/events/illustrations-responsives",
+        "name": "Illustrations responsives",
+        "category": "CaenCamp",
+        "number": 41,
+        "startDate": "2018-11-27T17:30:00Z",
+        "endDate": "1970-01-01T00:00:00Z",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "isAccessibleForFree": true,
+        "description": "Présentation et description de &amplt;picture&ampgt; srcset et sizes ainsi que de la propriété css object-fit\nAfin de sensibiliser à l&amp#39;utilisation des images aujourd&amp#39;hui et l&amp#39;enjeu de performance qui y est lié.\n",
+        "descriptionHtml": "<p>Présentation et description de <code>&lt;picture&gt;</code> <code>srcset</code> et <code>sizes</code> ainsi que de la propriété css <code>object-fit</code>\nAfin de sensibiliser à l&#39;utilisation des images aujourd&#39;hui et l&#39;enjeu de performance qui y est lié.</p>\n",
+        "disambiguatingDescription": "Présentation et description de 'picture', 'srcset' et 'sizes' ainsi que de la propriété css 'object-fit', afin de sensibiliser à l'utilisation des images aujourd'hui et l'enjeu de performance qui y est lié.",
+        "inLanguage": {
+            "@type": "Language",
+            "name": "French"
+        },
+        "image": "https://caen.camp/static/logoFondBlanc-278da657a83902f7d21083ade8e9ce7a.png",
+        "tags": ["javascript", "responsive", "typescript"],
+        "hasVideo": true,
+        "meetupId": "255224689",
+        "location": {
+            "@type": "Place",
+            "@id": "forum-digital",
+            "identifier": "forum-digital",
+            "url": "http://localhost:3001/api/places/forum-digital",
+            "name": "Forum digital",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Campus EffiScience | Bâtiment Erable, 8 rue Léopold Sedar Senghor",
+                "addressLocality": "Colombelles",
+                "postalCode": "14460",
+                "addressCountry": "FR"
+            }
+        },
+        "organizer": {
+            "@type": "Organization",
+            "@id": "caencamp",
+            "identifier": "caencamp",
+            "url": "http://localhost:3001/api/organizations/caencamp",
+            "name": "CaenCamp"
+        },
+        "sponsor": {
+            "@type": "Organization",
+            "@id": "incaya",
+            "identifier": "incaya",
+            "url": "http://localhost:3001/api/organizations/incaya",
+            "name": "Incaya"
+        },
+        "workPerformed": [
+            {
+                "@type": "CreativeWork",
+                "@id": "illustrations-responsives",
+                "identifier": "illustrations-responsives",
+                "url": "http://localhost:3001/api/creative-works/illustrations-responsives",
+                "name": "Illustrations responsives",
+                "format": {
+                    "label": "Regular",
+                    "durationInMinutes": 45
+                },
+                "description": "Présentation et description de <picture> srcset et sizes ainsi que de\nla propriété css object-fit Afin de sensibiliser à l'utilisation\ndes images aujourd'hui et l'enjeu de performance qui y est lié.\n",
+                "descriptionHtml": "<p>Présentation et description de <code>&lt;picture&gt;</code> <code>srcset</code> et <code>sizes</code> ainsi que de la propriété css <code>object-fit</code>\nAfin de sensibiliser à l'utilisation des images aujourd'hui et l'enjeu de performance qui y est lié.</p>",
+                "abstract": "Présentation et description de 'picture', 'srcset' et 'sizes' ainsi que de la propriété css 'object-fit', afin de sensibiliser à l'utilisation des images aujourd'hui et l'enjeu de performance qui y est lié.",
+                "maintainers": [
+                    {
+                        "@type": "Person",
+                        "@id": "yvain-liechti",
+                        "identifier": "yvain-liechti",
+                        "url": "http://localhost:3001/api/speakers/yvain-liechti",
+                        "name": "Yvain Liechti",
+                        "disambiguatingDescription": "Make a better Web everyday @CleverAge #js #html #css #catLife"
+                    }
+                ],
+                "video": "https://www.youtube.com/watch?v=1f46hA_Cc2E"
+            },
+            {
+                "@type": "CreativeWork",
+                "@id": "nestjs",
+                "identifier": "nestjs",
+                "url": "http://localhost:3001/api/creative-works/nestjs",
+                "name": "NestJS",
+                "format": {
+                    "label": "Lightning",
+                    "durationInMinutes": 5
+                },
+                "description": "Présentation de NestJS [https://nestjs.com/], un framework qui\nexploite la puissance de TypeScript. Il propose notamment un système\nde module et d'injection de dépendances permettant d'architecturer\nson code de manière simple mais efficace.\n",
+                "descriptionHtml": "<p>Présentation de <a href=\"https://nestjs.com/\">NestJS</a>, un framework qui exploite la puissance de TypeScript. Il propose notamment un système de module et d'injection de dépendances permettant d'architecturer son code de manière simple mais efficace.</p>",
+                "abstract": "Présentation de NestJS, un framework qui exploite la puissance de TypeScript. Il propose notamment un système de module et d'injection de dépendances permettant d'architecturer son code de manière simple mais efficace.",
+                "maintainers": [
+                    {
+                        "@type": "Person",
+                        "@id": "quentin-desrame",
+                        "identifier": "quentin-desrame",
+                        "url": "http://localhost:3001/api/speakers/quentin-desrame",
+                        "name": "Quentin Desramé",
+                        "disambiguatingDescription": "Développeur polyglotte et testeur de nouvelles technologies à mes heures perdues."
+                    }
+                ],
+                "video": "https://www.youtube.com/watch?v=u30Duc1VlKY"
+            }
+        ],
+        "performers": [
+            {
+                "@type": "Person",
+                "@id": "yvain-liechti",
+                "identifier": "yvain-liechti",
+                "url": "http://localhost:3001/api/speakers/yvain-liechti",
+                "name": "Yvain Liechti",
+                "disambiguatingDescription": "Make a better Web everyday @CleverAge #js #html #css #catLife"
+            },
+            {
+                "@type": "Person",
+                "@id": "quentin-desrame",
+                "identifier": "quentin-desrame",
+                "url": "http://localhost:3001/api/speakers/quentin-desrame",
+                "name": "Quentin Desramé",
+                "disambiguatingDescription": "Développeur polyglotte et testeur de nouvelles technologies à mes heures perdues."
+            }
+        ]
+    }
+]

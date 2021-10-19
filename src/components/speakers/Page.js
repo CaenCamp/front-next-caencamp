@@ -1,5 +1,5 @@
 export const SpeakerPage = ({ speaker }) => (
-    <div className="content">
+    <div className="content post">
         <article>
             <h1>{speaker.name}</h1>
             <div className="sub-head">

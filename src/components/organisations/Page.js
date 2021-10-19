@@ -1,5 +1,5 @@
 export const OrganizationPage = ({ organization }) => (
-    <div className="content">
+    <div className="content post">
         <article>
             <h1>{organization.name}</h1>
             <div className="sub-head">

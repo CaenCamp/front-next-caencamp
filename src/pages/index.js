@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import CaenCampResume from '@/components/CaenCampResume';
-import { EventListItem2 } from '@/components/events/ListItem';
+import { EventListItem } from '@/components/events/ListItem';
 import { Favicon } from '@/components/Favicon';
 
 import illustration from '../../public/illustrations/undraw_open_source_1qxw.svg';
@@ -35,7 +35,7 @@ export async function getStaticProps() {
 
 export default function Home({ events }) {
     return (
-        <>
+        <div className="home">
             <Head>
                 <title>Le CaenCamp</title>
                 <meta name="description" content="Bienvenue sur le site du CaenCamp" />
@@ -69,7 +69,7 @@ export default function Home({ events }) {
                         {events.upcomming.length > 1 && <h2>Les prochains événements</h2>}
                         <div className="event-list">
                             {events.upcomming.map(event => (
-                                <EventListItem2 key={event.identifier} event={event} />
+                                <EventListItem key={event.identifier} event={event} />
                             ))}
                         </div>
                     </figcaption>
@@ -79,12 +79,12 @@ export default function Home({ events }) {
                         <h2>Le derniers événements</h2>
                         <div className="event-list">
                             {events.past.slice(0, 2).map(event => (
-                                <EventListItem2 key={event.identifier} event={event} />
+                                <EventListItem key={event.identifier} event={event} />
                             ))}
                         </div>
                     </figcaption>
                 )}
             </figure>
-        </>
+        </div>
     );
 }

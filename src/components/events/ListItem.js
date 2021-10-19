@@ -1,5 +1,5 @@
 /* eslint jsx-a11y/anchor-is-valid: 0 */
-import { format, isPast } from 'date-fns';
+import { isPast } from 'date-fns';
 import Link from 'next/link';
 
 const SpeakerList = ({ speakers }) => (
@@ -13,31 +13,6 @@ const SpeakerList = ({ speakers }) => (
 );
 
 export const EventListItem = ({ event }) => (
-    <div className="itemContainer">
-        <div className="talks">
-            {event.workPerformed.map(talk => (
-                <div className="talk" key={talk.identifier}>
-                    <h3 className="title">
-                        <Link href={`/evenements/${event.identifier}`}>{talk.name}</Link>
-                    </h3>
-                    <p className="description">{talk.abstract}</p>
-                    <div className="details">
-                        <span>
-                            Speaker.s: <SpeakerList speakers={talk.maintainers} />
-                        </span>
-                        <span>Durée: {talk.format.durationInMinutes} min</span>
-                    </div>
-                </div>
-            ))}
-        </div>
-        <div className="agenda">
-            <span>#{event.number}</span>
-            <span>{format(new Date(event.startDate), 'dd/MM/yyyy')}</span>
-            <span>{event.location.name}</span>
-        </div>
-    </div>
-);
-export const EventListItem2 = ({ event }) => (
     <div className={`card card--event${isPast(new Date(event.startDate)) ? '' : ' meeting'}`} data-component="card">
         {event.workPerformed.map((talk, index) => (
             <div className="card__text" key={talk.identifier}>
