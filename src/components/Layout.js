@@ -1,7 +1,7 @@
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, data }) => {
     return (
         <>
             <a className="skip-link" href="#main">
@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
             </a>
             <div className="grid-wrap">
                 <div className="wrap">
-                    <Header />
+                    <Header data={data} />
                     <main id="main">{children}</main>
                 </div>
                 <Footer />
