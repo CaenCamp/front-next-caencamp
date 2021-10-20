@@ -10,6 +10,7 @@
     - [Installation](#installation)
     - [Lancer le projet](#lancer-le-projet)
     - [L’organisation du code](#lorganisation-du-code)
+  - [Le design](#le-design)
   - [La convention de codage (coding style)](#la-convention-de-codage-coding-style)
     - [Commits Conventionnels](#commits-conventionnels)
   - [La documentation](#la-documentation)
@@ -84,6 +85,14 @@ Le projet est alors disponible sur <http://localhost:3000>
 ### L’organisation du code
 
 Le projet est basé sur Next.js qui impose [son propre formalisme](https://nextjs.org/docs/getting-started).
+
+## Le design
+
+Le design d'un projet comme celui du CaenCamp est souvent un problème. En effet, ce n'est jamais facile de trouver une personne ayant de bonnes capacités de design visuel prêtes à investir suffisamment de temps pour par exemple mettre en place si ce n'est un design system, mais tout du moins une charte graphique.
+
+Du coup, pour commencer à pouvoir développer les premières interfaces, nous sommes partis sur le [design system du W3C](https://design-system.w3.org/).
+
+Mais cette base ne demande qu'à évoluer vers une marque graphique plus personnelle, une discussion sur le sujet est entamée sur une discussion Github : [Design éthique](https://github.com/CaenCamp/front-next-caencamp/discussions/21).
 
 ## La convention de codage (coding style)
 
