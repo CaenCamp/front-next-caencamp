@@ -11,7 +11,7 @@ describe('Home', () => {
     it('renders a heading', () => {
         render(<Home />);
 
-        const heading = screen.getByText('Bienvenue sur le site du CaenCamp');
+        const heading = screen.getByText('Le CaenCamp');
 
         expect(heading).toBeInTheDocument();
     });

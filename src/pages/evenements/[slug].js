@@ -1,9 +1,6 @@
 import Head from 'next/head';
 
 import { EventPage } from '@/components/events/Page';
-import { Favicon } from '@/components/Favicon';
-import { Footer } from '@/components/Footer';
-import { Menu } from '@/components/Menu';
 
 const API_URL = process.env.API_URL;
 
@@ -38,17 +35,12 @@ export async function getStaticProps({ params: { slug } }) {
 
 const Event = ({ event = {} }) => {
     return (
-        <div className="container">
+        <>
             <Head>
                 <title>{event.name} - CaenCamp</title>
-                <Favicon />
             </Head>
-
-            <Menu />
             <EventPage event={event} />
-
-            <Footer />
-        </div>
+        </>
     );
 };
 

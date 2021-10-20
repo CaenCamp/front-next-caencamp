@@ -1,5 +1,5 @@
 const Resume = () => (
-    <div className="resume">
+    <>
         <p>
             Parallèlement aux rencontres autour des présentations techniques du CaenCamp, certains membres du collectif
             ont souhaité se retrouver pour aborder plus directement leur activité quotidienne : écrire du code.
@@ -16,7 +16,7 @@ const Resume = () => (
             <strong>tous.tes les développeur.euses</strong> du Calvados, que ces personnes soient juniors, séniores,
             professionnelles ou étudiantes.
         </p>
-    </div>
+    </>
 );
 
 export default Resume;

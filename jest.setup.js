@@ -11,6 +11,13 @@ console.error = (...args) => {
     originalError.call(console, ...args);
 };
 
+jest.mock('next/image', () => ({
+    __esModule: true,
+    default: () => {
+        return 'Next image stub'; // whatever
+    },
+}));
+
 // // eslint-disable-next-line no-console
 // const originalError = console.error;
 // // eslint-disable-next-line no-undef

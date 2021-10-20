@@ -1,7 +1,9 @@
 export const TagList = ({ tags }) => (
-    <p>
+    <ul className="clean-list">
         {tags.map(tag => (
-            <span key={tag.identifier}>{tag.label} / </span>
+            <li key={tag.identifier}>
+                <span className="tag">{tag.label}</span>
+            </li>
         ))}
-    </p>
+    </ul>
 );

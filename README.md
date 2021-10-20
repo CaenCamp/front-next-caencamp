@@ -15,6 +15,8 @@ Nous avons donc basculé les contenus dans une base de données postgreSQL et le
 
 Ce projet a donc pour objectif d'exposer les contenus disponibles depuis l'API du CaenCamp sur le web :) Et pour cette nouvelle version du site, nous avons choisi d'utiliser [Next.js](https://nextjs.org/).
 
+Vous pourrez trouver une vidéo de présentation de cette migration sur le site du CaenCamp : [Migrer de Gatsby à Next.js](https://caen.camp/talks/de-gatsby-a-next).
+
 ## Démarrage rapide
 
 ### Pré-requis

@@ -3,6 +3,6 @@ describe('Home', () => {
         // Start from the index page
         cy.visit('/');
 
-        cy.get('h1').contains('Bienvenue sur le site du CaenCamp');
+        cy.get('h1').contains('Le CaenCamp');
     });
 });
