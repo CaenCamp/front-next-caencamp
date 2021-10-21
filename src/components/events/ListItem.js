@@ -19,12 +19,10 @@ export const EventListItem = ({ event }) => (
                 <div className="l-sidebar">
                     <div>
                         <div className="not-sidebar">
+                            {!index && <span className="txt-eris">Édition #{event.number}</span>}
                             <h2 className="card__heading">
                                 <Link href={`/evenements/${event.identifier}`}>
-                                    <a className="card__link">
-                                        {!index && <span>#{event.number} - </span>}
-                                        {talk.name}
-                                    </a>
+                                    <a className="card__link">{talk.name}</a>
                                 </Link>
                             </h2>
                             <p>{talk.abstract}</p>

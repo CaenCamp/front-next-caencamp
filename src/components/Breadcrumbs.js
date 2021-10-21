@@ -10,7 +10,7 @@ export const Breadcrumbs = ({ data, router }) => {
                             </li>
                             <li>
                                 <a href={router.asPath} aria-current="page">
-                                    {data.event.name}
+                                    Édition #{data.event.number}
                                 </a>
                             </li>
                         </ol>
