@@ -6,8 +6,8 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "test": "jest --watch",
-        "test:ci": "jest",
+        "test": "TZ=UTC jest --watch",
+        "test:ci": "TZ=UTC jest",
         "cypress": "cypress open",
         "cypress:headless": "cypress run",
         "e2e": "start-server-and-test start http://localhost:3111 cypress",
@@ -25,7 +25,8 @@
         "date-fns": "2.25.0",
         "next": "11.1.2",
         "react": "17.0.2",
-        "react-dom": "17.0.2"
+        "react-dom": "17.0.2",
+        "react-player": "2.9.0"
     },
     "devDependencies": {
         "@babel/core": "7.15.8",
