@@ -1,3 +1,16 @@
+import { isPast } from 'date-fns';
+import Link from 'next/link';
+import ReactPlayer from 'react-player';
+
+const playerConfig = {
+    youtube: {
+        playerVars: { showinfo: 1 },
+    },
+    vimeo: {
+        playerOptions: { showinfo: 1 },
+    },
+};
+
 export const computeTalkDateTime = ({ event, talk }) => {
     const startDate = new Date(event.startDate);
     for (const oneTalk of event.workPerformed) {
@@ -36,33 +49,29 @@ const TalkDuration = ({ talk }) => (
     </>
 );
 
-const TalkSpeakers = () => (
+const TalkSpeakers = ({ talk }) => (
     <>
         <dt>Speaker:</dt>
-        <dd>Deidre De Veloper</dd>
+        <dd>
+            {talk.maintainers.map(speaker => (
+                <span key={speaker.identifier}>
+                    <Link href={`/speakers/${speaker.identifier}`}>{speaker.name}</Link>{' '}
+                </span>
+            ))}
+        </dd>
     </>
 );
 
-const TalkTags = () => (
+const TalkTags = ({ event }) => (
     <>
         <dt className="with-link">Tags:</dt>
         <dd className="l-cluster with-link">
             <ul className="clean-list">
-                <li>
-                    <a href="path/to/page">Tag 1</a>
-                </li>
-                <li>
-                    <a href="path/to/page">Tag 2</a>
-                </li>
-                <li>
-                    <a href="path/to/page">Tag 3</a>
-                </li>
-                <li>
-                    <a href="path/to/page">Tag 4</a>
-                </li>
-                <li>
-                    <a href="path/to/page">Tag 5</a>
-                </li>
+                {event.tags.map(tag => (
+                    <li key={tag}>
+                        <span className="tag">{tag}</span>
+                    </li>
+                ))}
             </ul>
         </dd>
     </>
@@ -75,11 +84,11 @@ const EventLocation = ({ event }) => (
     </>
 );
 
-const EventRegistration = () => (
+const EventRegistration = ({ event }) => (
     <>
         <dt className="with-link">Inscription:</dt>
         <dd className="with-link">
-            <a href="path/to/site">Name of website</a>
+            <a href={`https://www.meetup.com/fr-FR/CaenCamp/events/${event.meetupId}/`}>Meetup</a>
         </dd>
     </>
 );
@@ -91,10 +100,10 @@ const TalkMeta = ({ event, talk }) => {
             <dl className="grid">
                 <TalkDateTime event={event} talk={talk} />
                 <TalkDuration talk={talk} />
-                <TalkSpeakers />
+                <TalkSpeakers talk={talk} />
                 <EventLocation event={event} />
-                <TalkTags />
-                <EventRegistration />
+                <TalkTags event={event} />
+                {event.meetupId && !isPast(new Date(event.startDate)) && <EventRegistration event={event} />}
             </dl>
         </section>
     );
@@ -127,6 +136,11 @@ export const EventPage = ({ event }) => {
                                 __html: event.descriptionHtml,
                             }}
                         ></div>
+                        {!!talk.video && (
+                            <div className="component l-center">
+                                <ReactPlayer url={talk.video} config={playerConfig} controls={true} />
+                            </div>
+                        )}
                     </article>
                 ))}
             </div>
