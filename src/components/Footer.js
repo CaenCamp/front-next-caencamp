@@ -56,7 +56,7 @@ export const Footer = () => (
                 </ul>
             </div>
             <p className="copyright">
-                <Link className="with-icon--larger" href="https://twitter.com/caencamp">
+                <Link className="with-icon--larger" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                     <a>
                         <Image
