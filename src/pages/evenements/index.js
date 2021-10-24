@@ -61,7 +61,7 @@ export default function EventList({ events }) {
         selectTag: tag =>
             dispatch({
                 type: SELECT_TAG,
-                payload: { tag },
+                payload: tag,
             }),
         selectYear: year =>
             dispatch({

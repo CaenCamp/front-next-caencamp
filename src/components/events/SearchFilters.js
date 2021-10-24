@@ -1,4 +1,4 @@
-import { TagList } from '@/components/tags/List';
+import { TagFilters } from '@/components/tags/List';
 
 const SearchFilters = ({
     actions,
@@ -9,6 +9,7 @@ const SearchFilters = ({
     onlyWithVideo,
     selectedYear,
     selectedSpeaker,
+    selectedTags,
 }) => {
     const handleOnlyWithVideoChange = event => {
         event.stopPropagation();
@@ -25,6 +26,10 @@ const SearchFilters = ({
         actions.selectSpeaker(event.target.value);
     };
 
+    const handleTagSelect = tag => {
+        actions.selectTag(tag);
+    };
+
     return (
         <div className="u-full-width hero hero--listing">
             <div className="l-center">
@@ -34,7 +39,7 @@ const SearchFilters = ({
                     <div>
                         <div className="not-sidebar">
                             <div className="l-cluster">
-                                <TagList tags={tags} />
+                                <TagFilters tags={tags} handleTagSelect={handleTagSelect} selectedTags={selectedTags} />
                             </div>
                         </div>
                         <div className="sidebar">

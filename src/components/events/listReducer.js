@@ -8,9 +8,9 @@ export const initialState = {
     events: [],
     eventsToDisplay: [],
     availableSpeakers: [],
-    selectedSpeaker: null,
+    selectedSpeaker: 'null',
     availableYears: [],
-    selectedYear: null,
+    selectedYear: 'null',
     tags: [],
     selectedTags: [],
     onlyWithVideo: false,
@@ -69,6 +69,38 @@ const extractYears = events => {
         });
 };
 
+const computeSelectedTags = (tags, selectedTag) => {
+    if (tags.includes(selectedTag)) {
+        return tags.filter(tag => tag !== selectedTag);
+    }
+
+    return [...tags, selectedTag];
+};
+
+const eventMeetTagsfilter = (event, tagsfilter) => {
+    if (!tagsfilter.length) return true;
+    return tagsfilter.some(tag => event.tags.includes(tag));
+};
+const eventMeetYearFilter = (event, yearFilter) => {
+    return yearFilter === 'null' ? true : event.startDate.includes(yearFilter);
+};
+const eventMeetSpeakerFilter = (event, speakerFilter) => {
+    return speakerFilter === 'null'
+        ? true
+        : !!event.performers.find(performer => performer.identifier === speakerFilter);
+};
+const eventMeetWithVideoFilter = (event, withVideofiler) => {
+    return withVideofiler ? !!event.hasVideo : true;
+};
+const filterEventsToDisplay = ({ events, tagsfilter, yearFilter, speakerFilter, withVideofiler }) =>
+    events.filter(
+        event =>
+            eventMeetYearFilter(event, yearFilter) &&
+            eventMeetSpeakerFilter(event, speakerFilter) &&
+            eventMeetTagsfilter(event, tagsfilter) &&
+            eventMeetWithVideoFilter(event, withVideofiler),
+    );
+
 export const reducer = (state, action) => {
     switch (action.type) {
         case INITIALISATION: {
@@ -82,31 +114,60 @@ export const reducer = (state, action) => {
             };
         }
         case SELECT_TAG: {
-            return state;
+            const newSelectedTag = computeSelectedTags(state.selectedTags, action.payload);
+            const eventsToDisplay = filterEventsToDisplay({
+                events: state.events,
+                tagsfilter: newSelectedTag,
+                yearFilter: state.selectedYear,
+                speakerFilter: state.selectedSpeaker,
+                withVideofiler: state.onlyWithVideo,
+            });
+            return {
+                ...state,
+                selectedTags: newSelectedTag,
+                eventsToDisplay,
+            };
         }
         case SELECT_YEAR: {
+            const eventsToDisplay = filterEventsToDisplay({
+                events: state.events,
+                tagsfilter: state.selectedTags,
+                yearFilter: action.payload,
+                speakerFilter: state.selectedSpeaker,
+                withVideofiler: state.onlyWithVideo,
+            });
             return {
                 ...state,
                 selectedYear: action.payload,
+                eventsToDisplay,
             };
         }
         case SELECT_SPEAKER: {
+            const eventsToDisplay = filterEventsToDisplay({
+                events: state.events,
+                tagsfilter: state.selectedTags,
+                yearFilter: state.selectedYear,
+                speakerFilter: action.payload,
+                withVideofiler: state.onlyWithVideo,
+            });
             return {
                 ...state,
                 selectedSpeaker: action.payload,
+                eventsToDisplay,
             };
         }
         case TOGGLE_ONLY_VIDEO: {
-            const eventsToDisplay = !state.onlyWithVideo
-                ? state.events.filter(event => !!event.hasVideo)
-                : [...state.events];
+            const eventsToDisplay = filterEventsToDisplay({
+                events: state.events,
+                tagsfilter: state.selectedTags,
+                yearFilter: state.selectedYear,
+                speakerFilter: state.selectedSpeaker,
+                withVideofiler: !state.onlyWithVideo,
+            });
             return {
                 ...state,
                 onlyWithVideo: !state.onlyWithVideo,
                 eventsToDisplay,
-                tags: extractTags(eventsToDisplay),
-                availableSpeakers: extractSpeakers(eventsToDisplay),
-                availableYears: extractYears(eventsToDisplay),
             };
         }
         default: {
