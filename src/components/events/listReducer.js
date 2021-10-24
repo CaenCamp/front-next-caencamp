@@ -3,6 +3,7 @@ export const SELECT_TAG = 'select-tag';
 export const SELECT_YEAR = 'select-year';
 export const SELECT_SPEAKER = 'select-speaker';
 export const TOGGLE_ONLY_VIDEO = 'toggle-only-video';
+export const RESET = 'reset';
 
 export const initialState = {
     events: [],
@@ -111,6 +112,16 @@ export const reducer = (state, action) => {
                 tags: extractTags(action.payload.events),
                 availableSpeakers: extractSpeakers(action.payload.events),
                 availableYears: extractYears(action.payload.events),
+            };
+        }
+        case RESET: {
+            return {
+                ...initialState,
+                events: state.events,
+                eventsToDisplay: state.events,
+                tags: extractTags(state.events),
+                availableSpeakers: extractSpeakers(state.events),
+                availableYears: extractYears(state.events),
             };
         }
         case SELECT_TAG: {

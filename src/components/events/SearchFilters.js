@@ -30,6 +30,10 @@ const SearchFilters = ({
         actions.selectTag(tag);
     };
 
+    const handleReset = () => {
+        actions.reset();
+    };
+
     return (
         <div className="u-full-width hero hero--listing">
             <div className="l-center">
@@ -86,7 +90,6 @@ const SearchFilters = ({
                                     <select
                                         id="selectedSpeaker"
                                         name="selectedSpeaker"
-                                        style={{ backgroundColor: 'white', backgroundImage: 'none' }}
                                         onChange={handleSpeakerSelect}
                                         value={selectedSpeaker || ''}
                                     >
@@ -97,6 +100,16 @@ const SearchFilters = ({
                                             </option>
                                         ))}
                                     </select>
+                                </div>
+                                <div className="input-group">
+                                    <button
+                                        className="button button--ghost"
+                                        type="reset"
+                                        onClick={handleReset}
+                                        onKeyPress={handleReset}
+                                    >
+                                        Enlever tout les filtres
+                                    </button>
                                 </div>
                             </form>
                         </div>

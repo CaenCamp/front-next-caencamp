@@ -6,6 +6,7 @@ import {
     INITIALISATION,
     initialState,
     reducer,
+    RESET,
     SELECT_SPEAKER,
     SELECT_TAG,
     SELECT_YEAR,
@@ -71,7 +72,10 @@ export default function EventList({ events }) {
         toggleOnlyVideo: () =>
             dispatch({
                 type: TOGGLE_ONLY_VIDEO,
-                payload: {},
+            }),
+        reset: () =>
+            dispatch({
+                type: RESET,
             }),
     };
 
