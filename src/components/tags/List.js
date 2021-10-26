@@ -6,7 +6,7 @@ export const TagFilters = ({ handleTagSelect, selectedTags, tags }) => {
             {tags.map(tag => (
                 <li
                     key={tag}
-                    className={selectedTags.includes(tag) ? 'cc-tag tag-selected' : 'cc-tag'}
+                    className={selectedTags.includes(tag) ? 'cc-tag-filter tag-selected' : 'cc-tag-filter'}
                     onClick={() => handleTagSelect(tag)}
                     onKeyPress={ev => {
                         if (ev.key === 's') {

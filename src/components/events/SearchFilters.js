@@ -1,3 +1,4 @@
+import ListTitle from '@/components/events/ListTitle';
 import { TagFilters } from '@/components/tags/List';
 
 const SearchFilters = ({
@@ -38,7 +39,13 @@ const SearchFilters = ({
         <div className="u-full-width hero hero--listing">
             <div className="l-center">
                 <h1>Les événements</h1>
-                <p className="lead">Toutes les {eventsToDisplay.length} rencontres depuis 2012.</p>
+                <ListTitle
+                    eventsToDisplay={eventsToDisplay}
+                    tagsFilters={selectedTags}
+                    hasWithVideoFilter={onlyWithVideo}
+                    yearFilter={selectedYear}
+                    speakerFilter={selectedSpeaker}
+                />
                 <div className="l-sidebar">
                     <div>
                         <div className="not-sidebar">

@@ -68,7 +68,16 @@ export const EventListItem = ({ event }) => (
                     </div>
                 </div>
                 <p className="txt-pluto">Durée: {talk.format.durationInMinutes} min</p>
-                <br />
+                <div className="l-cluster">
+                    <ul className="clean-list">
+                        {talk.tags.map(tag => (
+                            <li key={tag}>
+                                <span className="cc-tag">{tag}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                {!index && event.workPerformed.length > 1 && <br />}
             </div>
         ))}
     </div>
