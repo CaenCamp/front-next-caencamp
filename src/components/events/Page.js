@@ -62,12 +62,12 @@ const TalkSpeakers = ({ talk }) => (
     </>
 );
 
-const TalkTags = ({ event }) => (
+const TalkTags = ({ talk }) => (
     <>
         <dt className="with-link">Tags:</dt>
         <dd className="l-cluster with-link">
             <ul className="clean-list">
-                {event.tags.map(tag => (
+                {talk.tags.map(tag => (
                     <li key={tag}>
                         <span className="tag">{tag}</span>
                     </li>
@@ -102,7 +102,7 @@ const TalkMeta = ({ event, talk }) => {
                 <TalkDuration talk={talk} />
                 <TalkSpeakers talk={talk} />
                 <EventLocation event={event} />
-                <TalkTags event={event} />
+                <TalkTags talk={talk} />
                 {event.meetupId && !isPast(new Date(event.startDate)) && <EventRegistration event={event} />}
             </dl>
         </section>

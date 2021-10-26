@@ -1,4 +1,5 @@
 import '@/styles/core.css';
+import '@/styles/cc_css.css';
 
 import Head from 'next/head';
 

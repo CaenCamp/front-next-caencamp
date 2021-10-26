@@ -78,7 +78,8 @@
                         "disambiguatingDescription": "Dév, Agilité, Pair Programming, Ruby On Rails, Debian, Open source, TDD, débutant maker"
                     }
                 ],
-                "video": "https://youtu.be/46AYdmshkKw"
+                "video": "https://youtu.be/46AYdmshkKw",
+                "tags": ["devops", "tests"]
             }
         ],
         "performers": [
@@ -177,7 +178,8 @@
                         "disambiguatingDescription": "Make a better Web everyday @CleverAge #js #html #css #catLife"
                     }
                 ],
-                "video": "https://www.youtube.com/watch?v=1f46hA_Cc2E"
+                "video": "https://www.youtube.com/watch?v=1f46hA_Cc2E",
+                "tags": ["responsive"]
             },
             {
                 "@type": "CreativeWork",
@@ -202,7 +204,8 @@
                         "disambiguatingDescription": "Développeur polyglotte et testeur de nouvelles technologies à mes heures perdues."
                     }
                 ],
-                "video": null
+                "video": null,
+                "tags": ["javascript", "typescript"]
             }
         ],
         "performers": [

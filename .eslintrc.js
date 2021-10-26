@@ -39,5 +39,6 @@ module.exports = {
         'cypress/assertion-before-screenshot': 'warn',
         'cypress/no-force': 'warn',
         'cypress/no-async-tests': 'error',
+        'jsx-a11y/no-onchange': 'off',
     },
 };
