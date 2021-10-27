@@ -56,7 +56,7 @@ export const SpeakerPage = ({ speaker }) => (
                             ></div>
                         </div>
                     </div>
-                    <SpeakerWebSite websites={speaker.websites} />
+                    {speaker.websites && speaker.websites.length > 0 && <SpeakerWebSite websites={speaker.websites} />}
                     <div className="sidebar">
                         <div className="avatar">
                             <Avatar
@@ -72,7 +72,7 @@ export const SpeakerPage = ({ speaker }) => (
         </div>
         <div className="u-full-width">
             <div className="l-center">
-                {speaker.talks.length > 1 ? (
+                {speaker.talks && speaker.talks.length > 1 ? (
                     <h2 className="txt-mars">Ses {speaker.talks.length} talks</h2>
                 ) : (
                     <h2 className="txt-mars">Son talk</h2>
@@ -80,9 +80,7 @@ export const SpeakerPage = ({ speaker }) => (
             </div>
         </div>
         <div className="event-list">
-            {speaker.talks.map(talk => (
-                <TalkListItem talk={talk} key={talk.identifier} />
-            ))}
+            {speaker.talks && speaker.talks.map(talk => <TalkListItem talk={talk} key={talk.identifier} />)}
         </div>
     </article>
 );

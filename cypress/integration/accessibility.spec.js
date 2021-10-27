@@ -29,6 +29,7 @@ const testA11y = () => {
             {
                 rules: {
                     'heading-order': { enabled: false },
+                    'duplicate-id': { enabled: false },
                 },
             },
             terminalLog,

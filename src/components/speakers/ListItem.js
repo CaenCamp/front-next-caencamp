@@ -13,7 +13,7 @@ export const SpeakerListItem = ({ speaker }) => (
             <div className="l-frame l-frame--16-9 card__image">
                 <Avatar
                     size={40}
-                    name={speaker.name}
+                    name={speaker.identifier}
                     variant="bauhaus"
                     colors={['#A3C68C', '#879676', '#6E6662', '#4F364A', '#340735']}
                 />
