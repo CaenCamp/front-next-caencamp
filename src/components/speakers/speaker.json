@@ -1,0 +1,103 @@
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "clement-lebiez",
+    "identifier": "clement-lebiez",
+    "url": "http://localhost:3001/api/speakers/clement-lebiez",
+    "name": "Clément Le Biez",
+    "disambiguatingDescription": "Front-end developer @Yousignfr & Freelance - God created the world in #JavaScript",
+    "description": "Hello, je suis développeur Front-End chez Yousign, une startup basée\nà Caen.\nEn bref, je suis un développeur JavaScript qui essaye d'explorer tous\nles recoins de cette fabuleuse techno, et il y en a !\n\nJe suis aussi freelance Web & Mobile alors n'hésites pas si tu as un\nbesoin ;) !\n",
+    "descriptionHtml": "<p>Hello, je suis développeur Front-End chez Yousign, une startup basée à Caen.<br />\nEn bref, je suis un développeur JavaScript qui essaye d'explorer tous les recoins de cette fabuleuse techno, et il y en a !</p>\n<p>Je suis aussi freelance Web &amp; Mobile alors n'hésites pas si tu as un besoin ;) !</p>",
+    "image": "https://caen.camp/static/logoFondBlanc-278da657a83902f7d21083ade8e9ce7a.png",
+    "websites": [
+        {
+            "url": "https://github.com/Clebiez",
+            "type": "github"
+        },
+        {
+            "url": "https://www.linkedin.com/in/clebiez/",
+            "type": "linkedin"
+        },
+        {
+            "url": "https://twitter.com/clebiez",
+            "type": "twitter"
+        }
+    ],
+    "talks": [
+        {
+            "@type": "CreativeWork",
+            "@id": "pas-de-stress-ya-cypress",
+            "identifier": "pas-de-stress-ya-cypress",
+            "url": "http://localhost:3001/api/events/pas-de-stress-ya-cypress",
+            "name": "Pas de stress, y'a Cypress",
+            "format": {
+                "label": "Regular",
+                "durationInMinutes": 45
+            },
+            "abstract": "Retour d'expérience sur l'implémentation de tests end to end avec Cypress dans un contexte d'application SaaS.",
+            "video": "https://youtu.be/KN7SbxfHdCc",
+            "image": "https://caen.camp/static/logoFondBlanc-278da657a83902f7d21083ade8e9ce7a.png",
+            "recordedAt": {
+                "@type": "Event",
+                "@id": "pas-de-stress-ya-cypress",
+                "identifier": "pas-de-stress-ya-cypress",
+                "url": "http://localhost:3001/api/events/pas-de-stress-ya-cypress",
+                "name": "Pas de stress, y'a Cypress",
+                "startDate": "2020-10-28T18:00:00Z",
+                "disambiguatingDescription": "Retour d'expérience sur l'implémentation de tests end to end avec Cypress dans un contexte d'application SaaS.",
+                "number": 50,
+                "category": "CaenCamp"
+            }
+        },
+        {
+            "@type": "CreativeWork",
+            "@id": "documenter-son-api-avec-docsify",
+            "identifier": "documenter-son-api-avec-docsify",
+            "url": "http://localhost:3001/api/events/architecture-css-avec-itcss-et-inuitcss",
+            "name": "Documenter son API avec Docsify",
+            "format": {
+                "label": "Lightning",
+                "durationInMinutes": 5
+            },
+            "abstract": "Brève présentation de Docsify, un outil permettant de générer une documentation à la volée à partir de fichiers écrits en markdown.",
+            "video": "https://www.youtube.com/watch?v=nDQS0Fw4Gxg",
+            "image": "https://caen.camp/static/logoFondBlanc-278da657a83902f7d21083ade8e9ce7a.png",
+            "recordedAt": {
+                "@type": "Event",
+                "@id": "architecture-css-avec-itcss-et-inuitcss",
+                "identifier": "architecture-css-avec-itcss-et-inuitcss",
+                "url": "http://localhost:3001/api/events/architecture-css-avec-itcss-et-inuitcss",
+                "name": "Architecture CSS avec ITCSS et InuitCSS",
+                "startDate": "2018-03-27T16:30:00Z",
+                "disambiguatingDescription": "Lors de ce meetup, nous verrons comment l’utilisation d’outils tels que ITCSS ou InuitCSS permet de mettre en place une véritable architecture au sein des fichiers CSS.",
+                "number": 37,
+                "category": "CaenCamp"
+            }
+        },
+        {
+            "@type": "CreativeWork",
+            "@id": "architecture-flux-alternative-au-mvc",
+            "identifier": "architecture-flux-alternative-au-mvc",
+            "url": "http://localhost:3001/api/events/architecture-flux-alternative-au-mvc",
+            "name": "Architecture flux : Alternative au MVC ?",
+            "format": {
+                "label": "Regular",
+                "durationInMinutes": 45
+            },
+            "abstract": "Flux n'est pas un framework, mais plutôt une architecture, une façon de penser permettant de résoudre les problèmes de scalabilité et de maintenance que l'on peut rencontrer dans le développement d'applications webs volumineuses.",
+            "video": null,
+            "image": "https://caen.camp/static/logoFondBlanc-278da657a83902f7d21083ade8e9ce7a.png",
+            "recordedAt": {
+                "@type": "Event",
+                "@id": "architecture-flux-alternative-au-mvc",
+                "identifier": "architecture-flux-alternative-au-mvc",
+                "url": "http://localhost:3001/api/events/architecture-flux-alternative-au-mvc",
+                "name": "Architecture flux : Alternative au MVC ?",
+                "startDate": "2017-04-25T16:30:00Z",
+                "disambiguatingDescription": "Flux n'est pas un framework, mais plutôt une architecture, une façon de penser permettant de résoudre les problèmes de scalabilité et de maintenance que l'on peut rencontrer dans le développement d'applications webs volumineuses.",
+                "number": 29,
+                "category": "CaenCamp"
+            }
+        }
+    ]
+}
