@@ -18,13 +18,17 @@ export default function Speakers({ speakers }) {
             <Head>
                 <title>Les speakers des CaenCamp</title>
             </Head>
-            <h1 className="title">Les speakers</h1>
-            <div className="grid">
-                <ul>
-                    {speakers.map(speaker => (
-                        <SpeakerListItem key={speaker.identifier} speaker={speaker} />
-                    ))}
-                </ul>
+            <div className="l-center">
+                <div className="component component--columns component--columns--images">
+                    <div className="component--columns__intro">
+                        <h1 className="title">Les speakers</h1>
+                    </div>
+                    <ul className="clean-list" role="presentation">
+                        {speakers.map(speaker => (
+                            <SpeakerListItem key={speaker.identifier} speaker={speaker} />
+                        ))}
+                    </ul>
+                </div>
             </div>
         </>
     );
