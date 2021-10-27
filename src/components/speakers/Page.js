@@ -1,63 +1,88 @@
+import Avatar from 'boring-avatars';
+
+import { TalkListItem } from '@/components/events/ListItem';
+
+const getSiteIcon = type => {
+    switch (type) {
+        case 'github':
+            return '/social/github_b.svg';
+        case 'twitter':
+            return '/social/twitter_b.svg';
+        case 'linkedin':
+            return '/social/linked_b.svg';
+        default:
+            return '/social/perso_b.svg';
+    }
+};
+
+const SpeakerWebSite = ({ websites }) => {
+    return (
+        <div className="l-cluster">
+            <div>
+                {websites.map(site => (
+                    <div key={site.url}>
+                        <a href={site.url} className="with-icon--before">
+                            <img
+                                className="icon"
+                                src={getSiteIcon(site.type)}
+                                width="20"
+                                height="20"
+                                alt={site.type}
+                                aria-hidden="true"
+                            />{' '}
+                            {site.type}
+                        </a>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
+
 export const SpeakerPage = ({ speaker }) => (
-    <div className="content post">
-        <article>
-            <h1>{speaker.name}</h1>
-            <div className="sub-head">
-                Part of <a href="path/to/page">W3C life</a>
-            </div>
-            <section className="meta">
-                <h2 className="visuallyhidden">Author(s) and publish date</h2>
-                <dl>
-                    <dt>By:</dt>
-                    <dd className="l-cluster">
-                        <ul className="clean-list" role="presentation">
-                            <li>
-                                <p className="with-icon--before with-icon--larger">
-                                    <span className="avatar avatar--small icon">
-                                        <img src="/phone.svg" width="32" height="32" alt="phone" aria-hidden="true" />
-                                    </span>{' '}
-                                    Name of author
-                                </p>
-                            </li>
-                            <li>
-                                <p className="with-icon--before with-icon--larger">
-                                    <span className="avatar avatar--small icon">
-                                        <img src="/phone.svg" width="32" height="32" alt="phone" aria-hidden="true" />
-                                    </span>{' '}
-                                    Name of author
-                                </p>
-                            </li>
-                        </ul>
-                    </dd>
-                    <dt>Published:</dt>
-                    <dd>4 January 2021</dd>
-                </dl>
-                <a href="#comments" className="skip-to-comments txt-pluto">
-                    Skip to 6 Comments
-                </a>
-            </section>
-            <div className="component component--text">
-                <h2>Example text component</h2>
-                <p>
-                    Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or
-                    web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought
-                    to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.
-                </p>
-            </div>
-            <figure className="component component--image">
-                <div className="l-frame l-frame--16-9">
-                    <img
-                        src="/illustrations/undraw_pair_programming_njlp.svg"
-                        alt="A Macbook screen with code, as seen from over the developer's shoulder"
-                    />
+    <article>
+        <div className="people-list">
+            <div className="l-sidebar">
+                <div>
+                    <div className="not-sidebar">
+                        <div>
+                            <h1 className="txt-mars">{speaker.name}</h1>
+                            <p className="txt-eris">{speaker.disambiguatingDescription}</p>
+                            <div
+                                className="component"
+                                dangerouslySetInnerHTML={{
+                                    __html: speaker.descriptionHtml,
+                                }}
+                            ></div>
+                        </div>
+                    </div>
+                    <SpeakerWebSite websites={speaker.websites} />
+                    <div className="sidebar">
+                        <div className="avatar">
+                            <Avatar
+                                size={40}
+                                name={speaker.name}
+                                variant="bauhaus"
+                                colors={['#A3C68C', '#879676', '#6E6662', '#4F364A', '#340735']}
+                            />
+                        </div>
+                    </div>
                 </div>
-                <figcaption>
-                    <p>
-                        The figcaption is not a replacement for the image's <code>alt</code> attribute. It should be
-                        used for providing relevant supporting content.
-                    </p>
-                </figcaption>
-            </figure>
-        </article>
-    </div>
+            </div>
+        </div>
+        <div className="u-full-width">
+            <div className="l-center">
+                {speaker.talks.length > 1 ? (
+                    <h2 className="txt-mars">Ses {speaker.talks.length} talks</h2>
+                ) : (
+                    <h2 className="txt-mars">Son talk</h2>
+                )}
+            </div>
+        </div>
+        <div className="event-list">
+            {speaker.talks.map(talk => (
+                <TalkListItem talk={talk} key={talk.identifier} />
+            ))}
+        </div>
+    </article>
 );

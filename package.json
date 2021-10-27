@@ -22,6 +22,7 @@
         "*.js": "eslint --cache --fix"
     },
     "dependencies": {
+        "boring-avatars": "1.5.8",
         "date-fns": "2.25.0",
         "next": "11.1.2",
         "react": "17.0.2",

@@ -82,3 +82,54 @@ export const EventListItem = ({ event }) => (
         ))}
     </div>
 );
+
+export const TalkListItem = ({ talk }) => (
+    <div
+        className={`card card--event${isPast(new Date(talk.recordedAt.startDate)) ? '' : ' meeting'}`}
+        data-component="card"
+    >
+        <div className="card__text" key={talk.identifier}>
+            <div className="l-sidebar">
+                <div>
+                    <div className="not-sidebar">
+                        <h2 className="card__heading">
+                            <Link href={`/evenements/${talk.recordedAt.identifier}`}>
+                                <a className="card__link">{talk.name}</a>
+                            </Link>
+                        </h2>
+                        <p>{talk.abstract}</p>
+                    </div>
+
+                    <div className="sidebar">
+                        <div className="date-location">
+                            <div>
+                                <img src="/calendar.svg" width="18" height="20" alt="calendrier" aria-hidden="true" />
+                            </div>
+                            <div>
+                                <p className="txt-eris">Présenté lors de l'édition #{talk.recordedAt.number}</p>
+                                <p>
+                                    <time dateTime={talk.recordedAt.startDate}>
+                                        {new Date(talk.recordedAt.startDate).toLocaleDateString('fr-FR', {
+                                            weekday: 'long',
+                                            year: 'numeric',
+                                            month: 'long',
+                                            day: 'numeric',
+                                            hour: '2-digit',
+                                            minute: '2-digit',
+                                        })}
+                                    </time>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p className="txt-pluto">
+                <strong>Durée</strong>: {talk.format.durationInMinutes} min
+            </p>
+            <p className="txt-pluto">
+                <strong>Filmé</strong>: {talk.video ? 'oui' : 'non'}
+            </p>
+        </div>
+    </div>
+);
