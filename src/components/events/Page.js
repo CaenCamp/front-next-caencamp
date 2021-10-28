@@ -137,8 +137,16 @@ export const EventPage = ({ event }) => {
                             }}
                         ></div>
                         {!!talk.video && (
-                            <div className="component l-center">
-                                <ReactPlayer url={talk.video} config={playerConfig} controls={true} />
+                            <div className="player-wrapper">
+                                <ReactPlayer
+                                    className="cc-player"
+                                    url={talk.video}
+                                    config={playerConfig}
+                                    controls
+                                    light
+                                    width="100%"
+                                    height="100%"
+                                />
                             </div>
                         )}
                     </article>

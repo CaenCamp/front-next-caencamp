@@ -61,3 +61,15 @@
 .tag-selected:after {
     border-left-color: crimson;
 }
+
+.player-wrapper {
+    margin-top: 2rem;
+    position: relative;
+    padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+}
+
+.cc-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
