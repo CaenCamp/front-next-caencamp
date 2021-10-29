@@ -28,11 +28,16 @@ export async function getStaticProps({ params: { slug } }) {
     };
 }
 
-const Speaker = ({ speaker = {} }) => {
+const Speaker = ({ speaker = { name: 'CaenCamp', disambiguatingDescription: 'CaenCamp' } }) => {
     return (
         <>
             <Head>
                 <title>{speaker.name} - CaenCamp</title>
+            </Head>
+            <Head>
+                <title>{speaker.name} | CaenCamp</title>
+                <meta name="description" content={speaker.disambiguatingDescription} />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speaker) }} />
             </Head>
             <SpeakerPage speaker={speaker} />
         </>

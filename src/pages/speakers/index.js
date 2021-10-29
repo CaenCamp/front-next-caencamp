@@ -16,7 +16,8 @@ export default function Speakers({ speakers }) {
     return (
         <>
             <Head>
-                <title>Les speakers des CaenCamp</title>
+                <title>Les speakers du CaenCamp</title>
+                <meta name="description" content="Ils ont animé les rencontres du CaenCamp." />
             </Head>
             <div className="l-center">
                 <div className="component component--columns component--columns--images">
