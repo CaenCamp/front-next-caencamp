@@ -38,7 +38,7 @@ const SearchFilters = ({
     return (
         <div className="u-full-width hero hero--listing">
             <div className="l-center">
-                <h1>Les événements</h1>
+                <h1>Les rencontres</h1>
                 <ListTitle
                     eventsToDisplay={eventsToDisplay}
                     tagsFilters={selectedTags}

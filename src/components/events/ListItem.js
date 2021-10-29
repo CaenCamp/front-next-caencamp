@@ -21,7 +21,7 @@ export const EventListItem = ({ event }) => (
                         <div className="not-sidebar">
                             {!index && <span className="txt-eris">Édition #{event.number}</span>}
                             <h2 className="card__heading">
-                                <Link href={`/evenements/${event.identifier}`}>
+                                <Link href={`/rencontres/${event.identifier}`}>
                                     <a className="card__link">{talk.name}</a>
                                 </Link>
                             </h2>
@@ -93,7 +93,7 @@ export const TalkListItem = ({ talk }) => (
                 <div>
                     <div className="not-sidebar">
                         <h2 className="card__heading">
-                            <Link href={`/evenements/${talk.recordedAt.identifier}`}>
+                            <Link href={`/rencontres/${talk.recordedAt.identifier}`}>
                                 <a className="card__link">{talk.name}</a>
                             </Link>
                         </h2>

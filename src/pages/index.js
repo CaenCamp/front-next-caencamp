@@ -4,7 +4,6 @@ import Image from 'next/image';
 
 import CaenCampResume from '@/components/CaenCampResume';
 import { EventListItem } from '@/components/events/ListItem';
-import { Favicon } from '@/components/Favicon';
 
 import illustration from '../../public/illustrations/undraw_open_source_1qxw.svg';
 
@@ -38,8 +37,10 @@ export default function Home({ events }) {
         <div className="home">
             <Head>
                 <title>Le CaenCamp</title>
-                <meta name="description" content="Bienvenue sur le site du CaenCamp" />
-                <Favicon />
+                <meta
+                    name="description"
+                    content="Bienvenue sur le site du CaenCamp, collectif ouvert à tous.tes les développeur.euses du Calvados"
+                />
             </Head>
             <div className="u-full-width hero">
                 <div className="l-center">

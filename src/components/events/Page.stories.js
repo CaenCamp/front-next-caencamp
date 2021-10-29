@@ -8,7 +8,7 @@ export default {
     component: EventPage,
     parameters: {
         nextRouter: {
-            pathname: '/evenements',
+            pathname: '/rencontres',
         },
     },
 };

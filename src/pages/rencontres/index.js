@@ -82,7 +82,8 @@ export default function EventList({ events }) {
     return (
         <>
             <Head>
-                <title>Les événements CaenCamp</title>
+                <title>Les rencontres du CaenCamp</title>
+                <meta name="description" content="Toutes les rencontres du CaenCamp depuis 2012" />
             </Head>
             <SearchFilters
                 actions={actions}
@@ -99,7 +100,7 @@ export default function EventList({ events }) {
                 {eventsToDisplay.length > 0 &&
                     eventsToDisplay.map(event => <EventListItem key={event.identifier} event={event} />)}
                 {eventsToDisplay.length === 0 && (
-                    <p>Il n'existe pas d'événements répondant à vos critères de filtrage.</p>
+                    <p>Il n'existe pas de rencontre répondant à vos critères de filtrage.</p>
                 )}
             </div>
         </>

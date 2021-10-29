@@ -15,8 +15,8 @@ export const Menu = () => (
             </Link>
             <ul className="clean-list">
                 <li className="top-nav-item">
-                    <Link href="/evenements">
-                        <a className="nav-link">Les événements</a>
+                    <Link href="/rencontres">
+                        <a className="nav-link">Les rencontres</a>
                     </Link>
                 </li>
                 <li className="top-nav-item">

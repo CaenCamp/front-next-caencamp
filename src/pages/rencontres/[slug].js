@@ -33,11 +33,13 @@ export async function getStaticProps({ params: { slug } }) {
     };
 }
 
-const Event = ({ event = {} }) => {
+const Event = ({ event = { name: 'CaenCamp', abstract: 'CaenCamp' } }) => {
     return (
         <>
             <Head>
-                <title>{event.name} - CaenCamp</title>
+                <title>{event.name} | CaenCamp</title>
+                <meta name="description" content={event.abstract} />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(event) }} />
             </Head>
             <EventPage event={event} />
         </>
