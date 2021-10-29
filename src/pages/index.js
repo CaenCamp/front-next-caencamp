@@ -4,7 +4,6 @@ import Image from 'next/image';
 
 import CaenCampResume from '@/components/CaenCampResume';
 import { EventListItem } from '@/components/events/ListItem';
-import { Favicon } from '@/components/Favicon';
 
 import illustration from '../../public/illustrations/undraw_open_source_1qxw.svg';
 
@@ -30,6 +29,7 @@ export async function getStaticProps() {
 
     return {
         props: { events },
+        revalidate: 3600, // 1 heure en secondes
     };
 }
 
@@ -38,8 +38,10 @@ export default function Home({ events }) {
         <div className="home">
             <Head>
                 <title>Le CaenCamp</title>
-                <meta name="description" content="Bienvenue sur le site du CaenCamp" />
-                <Favicon />
+                <meta
+                    name="description"
+                    content="Bienvenue sur le site du CaenCamp, collectif ouvert à tous.tes les développeur.euses du Calvados"
+                />
             </Head>
             <div className="u-full-width hero">
                 <div className="l-center">
@@ -78,7 +80,7 @@ export default function Home({ events }) {
                     <figcaption>
                         <h2>Le derniers événements</h2>
                         <div className="event-list">
-                            {events.past.slice(0, 2).map(event => (
+                            {events.past.slice(0, 1).map(event => (
                                 <EventListItem key={event.identifier} event={event} />
                             ))}
                         </div>

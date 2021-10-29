@@ -39,8 +39,8 @@ const testA11y = () => {
 
 const pages = [
     `/`,
-    '/evenements',
-    '/evenements/a-la-decouverte-des-tests-automatiques',
+    '/rencontres',
+    '/rencontres/a-la-decouverte-des-tests-automatiques',
     '/speakers',
     '/speakers/guillaume-darbonne',
     '/jobs',

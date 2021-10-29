@@ -1,12 +1,12 @@
 export const Breadcrumbs = ({ data, router }) => {
-    if (data.event && router.pathname === '/evenements/[slug]') {
+    if (data.event && router.pathname === '/rencontres/[slug]') {
         return (
             <nav id="breadcrumb" aria-label="Breadcrumb">
                 <div className="l-center">
                     <div className="l-cluster">
                         <ol className="breadcrumbs clean-list">
                             <li>
-                                <a href="/evenements">Les événements</a>
+                                <a href="/rencontres">Les rencontres</a>
                             </li>
                             <li>
                                 <a href={router.asPath} aria-current="page">
@@ -27,7 +27,7 @@ export const Breadcrumbs = ({ data, router }) => {
                     <div className="l-cluster">
                         <ol className="breadcrumbs clean-list">
                             <li>
-                                <a href="/evenements">Les événements</a>
+                                <a href="/rencontres">Les rencontres</a>
                             </li>
                             <li>
                                 <a href={router.asPath} aria-current="page">
