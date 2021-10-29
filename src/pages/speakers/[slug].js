@@ -25,6 +25,7 @@ export async function getStaticProps({ params: { slug } }) {
 
     return {
         props: { speaker },
+        revalidate: 86400, // 1 journée en secondes
     };
 }
 

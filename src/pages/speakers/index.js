@@ -9,6 +9,7 @@ export async function getStaticProps() {
 
     return {
         props: { speakers },
+        revalidate: 3600, // 1 heure en secondes
     };
 }
 

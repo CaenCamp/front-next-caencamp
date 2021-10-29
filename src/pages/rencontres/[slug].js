@@ -30,6 +30,7 @@ export async function getStaticProps({ params: { slug } }) {
 
     return {
         props: { event },
+        revalidate: 86400, // 1 journée en secondes
     };
 }
 

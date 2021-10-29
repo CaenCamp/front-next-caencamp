@@ -20,16 +20,6 @@ export const Menu = () => (
                     </Link>
                 </li>
                 <li className="top-nav-item">
-                    <Link href="/jobs">
-                        <a className="nav-link">Les offres d'emploi</a>
-                    </Link>
-                </li>
-                <li className="top-nav-item">
-                    <Link href="/annuaire">
-                        <a className="nav-link">Les boites du numérique</a>
-                    </Link>
-                </li>
-                <li className="top-nav-item">
                     <Link href="/association">
                         <a className="nav-link">L'association</a>
                     </Link>

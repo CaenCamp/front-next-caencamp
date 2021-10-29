@@ -29,6 +29,7 @@ export async function getStaticProps() {
 
     return {
         props: { events },
+        revalidate: 3600, // 1 heure en secondes
     };
 }
 
@@ -79,7 +80,7 @@ export default function Home({ events }) {
                     <figcaption>
                         <h2>Le derniers événements</h2>
                         <div className="event-list">
-                            {events.past.slice(0, 2).map(event => (
+                            {events.past.slice(0, 1).map(event => (
                                 <EventListItem key={event.identifier} event={event} />
                             ))}
                         </div>
