@@ -52,8 +52,6 @@ const SearchFilters = ({
                             <div className="l-cluster">
                                 <TagFilters tags={tags} handleTagSelect={handleTagSelect} selectedTags={selectedTags} />
                             </div>
-                        </div>
-                        <div className="sidebar">
                             <form noValidate>
                                 <div className="field">
                                     <fieldset>
@@ -71,7 +69,20 @@ const SearchFilters = ({
                                             </label>
                                         </div>
                                     </fieldset>
+                                    <button
+                                        className="button button--ghost"
+                                        type="reset"
+                                        onClick={handleReset}
+                                        onKeyPress={handleReset}
+                                        style={{ cursor: 'pointer' }}
+                                    >
+                                        Enlever tout les filtres
+                                    </button>
                                 </div>
+                            </form>
+                        </div>
+                        <div className="sidebar">
+                            <form noValidate>
                                 <div className="field">
                                     <label htmlFor="selectedYear">
                                         <span className="field-label">Filtrer par année</span>
@@ -107,16 +118,6 @@ const SearchFilters = ({
                                             </option>
                                         ))}
                                     </select>
-                                </div>
-                                <div className="input-group">
-                                    <button
-                                        className="button button--ghost"
-                                        type="reset"
-                                        onClick={handleReset}
-                                        onKeyPress={handleReset}
-                                    >
-                                        Enlever tout les filtres
-                                    </button>
                                 </div>
                             </form>
                         </div>
