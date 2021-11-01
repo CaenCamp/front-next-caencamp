@@ -2631,15 +2631,7 @@ so that either of these properties is applied instead.
 \*------------------------------------*/
 .logo {
     display: block;
-    height: 2.75rem;
     position: relative;
-    width: 4.125rem;
-}
-@media screen and (min-width: 64em) {
-    .logo {
-        height: 3.25rem;
-        width: 4.875rem;
-    }
 }
 
 .logo--member {

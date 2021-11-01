@@ -73,3 +73,79 @@
     top: 0;
     left: 0;
 }
+
+/* Menu */
+
+@media screen and (min-width: 70em) {
+    li.top-nav-item-cc + li.top-nav-item-cc {
+        -webkit-margin-start: 0.25rem;
+        margin-inline-start: 0.25rem;
+    }
+}
+.global-nav__inner .top-nav-item-cc {
+    border-bottom: solid 1px #bdbdbd;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+}
+@media screen and (min-width: 70em) {
+    .global-nav__inner .top-nav-item-cc {
+        border-bottom: none;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    }
+}
+.global-nav__inner .top-nav-item-cc > .nav-link {
+    font-weight: 600;
+}
+@media screen and (min-width: 70em) {
+    .global-nav__inner .top-nav-item-cc > *:first-child {
+        font-size: 1rem;
+        height: 100%;
+        padding: 0.625rem 0.3125rem 0.4375rem !important;
+        position: relative;
+        white-space: nowrap;
+    }
+    .global-nav__inner .top-nav-item-cc > *:first-child::before {
+        background-color: #005a9c;
+        bottom: -0.125rem;
+        content: '';
+        display: none;
+        height: 0.1875rem;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
+    .global-nav__inner .top-nav-item-cc > *:first-child:hover::before {
+        display: block;
+    }
+    .global-nav__inner .top-nav-item-cc > *:first-child:focus {
+        background-color: #f9dc4a;
+        background-image: linear-gradient(to top, #000 3px, #f9dc4a 3px, #f9dc4a);
+        color: #000;
+    }
+    .global-nav__inner .top-nav-item-cc > *:first-child:focus:hover::before {
+        display: none;
+    }
+
+    .global-nav__inner .selected > *:first-child::before {
+        background-color: #005a9c;
+        bottom: -0.125rem;
+        content: '';
+        display: block;
+        height: 0.1875rem;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
+}
+
+.logo-selected::before {
+    background-color: #005a9c;
+    bottom: -0.125rem;
+    content: '';
+    display: block;
+    height: 0.1875rem;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
