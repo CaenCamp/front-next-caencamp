@@ -1,5 +1,20 @@
 import { useForm } from 'react-hook-form';
 
+/*
+{
+  name: 'ALEXIS JANVIER',
+  title: 'blob',
+  description: 'Most probably, you need some data to update the cache. The data is resolved or returned from the promise or async function you passed to mutate.\n' +
+    '\n' +
+    'The function passed to mutate will return an updated document which is used to update the corresponding cache value. If there is an error thown while executing the function, the error will be thrown so it can be handled appropriately.\n' +
+    '\n' +
+    'Most probably, you need some data to update the cache. The data is resolved or returned from the promise or async function you passed to mutate.\n' +
+    '\n' +
+    'The function passed to mutate will return an updated document which is used to update the corresponding cache value. If there is an error thown while executing the function, the error will be thrown so it can be handled appropriately.',
+  contact: 'Par téléphone'
+}
+*/
+
 const CallForSpeakerForm = () => {
     const {
         register,
@@ -7,7 +22,34 @@ const CallForSpeakerForm = () => {
         formState: { errors },
     } = useForm();
 
-    const onSubmit = data => global.console.log(data);
+    const onSubmit = data => {
+        const settings = {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+        };
+
+        fetch('/api/call-for-speaker', settings)
+            .then(response => {
+                global.console.log('Retour du call');
+                if (response.ok) throw Error(response.result);
+                return response.json();
+            })
+            .then(response => {
+                global.console.log('La réponse');
+                global.console.log(response);
+            })
+            .finally(() => {
+                global.console.log('Pour finir');
+            })
+            .catch(error => {
+                global.console.log('Erreur !!!');
+                global.console.log(error);
+            });
+    };
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -63,13 +105,13 @@ const CallForSpeakerForm = () => {
             <div className={`field ${errors.description ? ' field--error' : ''}`}>
                 <label htmlFor="description">
                     <span className="field-label">
-                        En quelques mots <span className="required">(200 caractères minimum, obligatoire)</span>
+                        En quelques mots <span className="required">(160 caractères minimum, obligatoire)</span>
                     </span>
                     {errors.description && (
                         <span className="field-error-msg" id="error-description">
                             <span className="visuallyhidden">Erreur:</span>{' '}
                             {errors.description.type === 'minLength'
-                                ? 'La description doit contenir au minimum 200 caractères.'
+                                ? 'La description doit contenir au minimum 160 caractères.'
                                 : 'La description est obligatoire.'}
                         </span>
                     )}
@@ -77,7 +119,7 @@ const CallForSpeakerForm = () => {
                 <textarea
                     id="description"
                     name="description"
-                    {...register('description', { required: true, minLength: 200 })}
+                    {...register('description', { required: true, minLength: 160 })}
                     aria-invalid={errors.description ? 'true' : 'false'}
                 ></textarea>
             </div>
