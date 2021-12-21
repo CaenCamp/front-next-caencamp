@@ -24,13 +24,15 @@
     "dependencies": {
         "boring-avatars": "1.5.8",
         "date-fns": "2.27.0",
+        "immer": ">=9.0.6",
         "next": "12.0.7",
         "react": "17.0.2",
         "react-dom": "17.0.2",
         "react-hook-form": "7.22.2",
         "react-is": "17.0.2",
         "react-player": "2.9.0",
-        "swr": "1.1.1"
+        "swr": "1.1.1",
+        "trim": ">=0.0.3"
     },
     "devDependencies": {
         "@babel/core": "7.16.5",
