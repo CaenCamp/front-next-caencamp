@@ -1,8 +1,16 @@
 import Head from 'next/head';
+import { useState } from 'react';
 
 import CallForSpeakerForm from '@/components/events/CallForSpeakerForm';
+import SubmittedPaper from '@/components/events/SubmittedPaper';
 
 export default function CallForSpeaker() {
+    const [submittedPaper, setSubmittedPaper] = useState(null);
+
+    if (submittedPaper !== null) {
+        return <SubmittedPaper submittedPaper={submittedPaper} />;
+    }
+
     return (
         <>
             <Head>
@@ -18,7 +26,7 @@ export default function CallForSpeaker() {
                     </p>
                 </div>
             </div>
-            <CallForSpeakerForm />
+            <CallForSpeakerForm handleValidSubmission={setSubmittedPaper} />
         </>
     );
 }
