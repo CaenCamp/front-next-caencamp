@@ -22,3 +22,4 @@ jobs:
                   wait-on: 'http://localhost:3111'
               env:
                   PORT: 3111
+                  FORCE_COLOR: 3
