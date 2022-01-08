@@ -87,7 +87,12 @@ describe('Speaker List Item', () => {
             </ul>,
         );
 
-        const results = await axe(container);
+        const results = await axe(container, {
+            rules: {
+                // for demonstration only, don't disable rules that need fixing.
+                'svg-img-alt': { enabled: false },
+            },
+        });
         expect(results).toHaveNoViolations();
     });
 });

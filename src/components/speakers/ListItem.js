@@ -5,7 +5,7 @@ export const SpeakerListItem = ({ speaker }) => (
     <li>
         <div className="card" data-component="card">
             <div className="card__text">
-                <h2 className="card__heading">
+                <h2 className="card__heading" id={speaker.name}>
                     <Link href={`/speakers/${speaker.identifier}`}>{speaker.name}</Link>
                 </h2>
                 <p>{speaker.disambiguatingDescription}</p>

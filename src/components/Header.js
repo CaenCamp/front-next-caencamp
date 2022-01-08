@@ -14,8 +14,14 @@ export const Header = ({ data }) => {
             <span role="status" aria-live="polite"></span>
             <div className="banner">
                 <div className="banner__inner l-center">
-                    <Image src={betaLogo} className="icon icon--beta" alt="Beta icon" role="img" />
-                    <p>
+                    <Image
+                        src={betaLogo}
+                        className="icon icon--beta"
+                        alt="Beta icon"
+                        role="img"
+                        aria-labelledby="site-in-beta"
+                    />
+                    <p id="site-in-beta">
                         Cette v2 du site du CaenCamp est en cours de réalisation.{' '}
                         <Link href="https://github.com/CaenCamp/front-next-caencamp">
                             Toute personne souhaitant participer est la bienvenue
