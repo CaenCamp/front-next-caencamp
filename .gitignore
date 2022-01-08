@@ -41,3 +41,6 @@ stories/*
 
 # Lighthouse
 .lighthouseci/*
+
+# Next
+*.local
