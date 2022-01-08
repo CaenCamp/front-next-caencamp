@@ -1,25 +1,11 @@
 import { useForm } from 'react-hook-form';
 
-/*
-{
-  name: 'ALEXIS JANVIER',
-  title: 'blob',
-  description: 'Most probably, you need some data to update the cache. The data is resolved or returned from the promise or async function you passed to mutate.\n' +
-    '\n' +
-    'The function passed to mutate will return an updated document which is used to update the corresponding cache value. If there is an error thown while executing the function, the error will be thrown so it can be handled appropriately.\n' +
-    '\n' +
-    'Most probably, you need some data to update the cache. The data is resolved or returned from the promise or async function you passed to mutate.\n' +
-    '\n' +
-    'The function passed to mutate will return an updated document which is used to update the corresponding cache value. If there is an error thown while executing the function, the error will be thrown so it can be handled appropriately.',
-  contact: 'Par téléphone'
-}
-*/
-
-const CallForSpeakerForm = () => {
+const CallForSpeakerForm = ({ handleValidSubmission = () => true }) => {
     const {
         register,
         handleSubmit,
         formState: { errors },
+        setError,
     } = useForm();
 
     const onSubmit = data => {
@@ -34,20 +20,14 @@ const CallForSpeakerForm = () => {
 
         fetch('/api/call-for-speaker', settings)
             .then(response => {
-                global.console.log('Retour du call');
-                if (response.ok) throw Error(response.result);
+                if (!response.ok) throw Error(response.result);
                 return response.json();
             })
             .then(response => {
-                global.console.log('La réponse');
-                global.console.log(response);
-            })
-            .finally(() => {
-                global.console.log('Pour finir');
+                handleValidSubmission(response);
             })
             .catch(error => {
-                global.console.log('Erreur !!!');
-                global.console.log(error);
+                setError(error);
             });
     };
 
