@@ -63,4 +63,4 @@ Si vous ne savez pas trop comment participer à un projet open-source, vous pouv
 
 ## License
 
-Les projets du Coding CaenCamp sont sous license [GNU GPLv3](LICENSE)
+Les projets du Coding CaenCamp sont sous license [GNU GPLv3](LICENSE).
