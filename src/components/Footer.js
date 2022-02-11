@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import githubLogo from '../../public/github.svg';
 import licence from '../../public/licence.png';
+import rssLogo from '../../public/rss.svg';
 import twitterLogo from '../../public/twitter.svg';
 
 export const Footer = () => (
@@ -50,6 +51,22 @@ export const Footer = () => (
                                     aria-hidden="true"
                                 />
                                 <span className="visuallyhidden">Le CaenCamp sur GitHub</span>
+                            </a>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link className="with-icon--larger" href="https://www.meetup.com/fr-FR/CaenCamp/events/rss/">
+                            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                            <a>
+                                <Image
+                                    className="icon icon--larger"
+                                    src={rssLogo}
+                                    width="20"
+                                    height="20"
+                                    alt="Le CaenCamp en RSS"
+                                    aria-hidden="true"
+                                />
+                                <span className="visuallyhidden">Le CaenCamp en RSS</span>
                             </a>
                         </Link>
                     </li>
