@@ -9,7 +9,7 @@
 
 Nous avons longtemps utilisé [Gatsby](https://www.gatsbyjs.com/) pour gérer [le site du CaenCamp](https://github.com/CaenCamp/new-website). Mais force est de constater que l'utilisation de Gatsby était une porte d'entrée complexe pour des personnes novices et que maintenir les versions du système et des plug-ins une sinécure.
 
-De plus, nous souhaitions ouvrir plus largement ouvrir les contenus du CaenCamp et l'utilisation du markdown était pour cela limitant.
+De plus, nous souhaitions ouvrir plus largement les contenus du CaenCamp et l'utilisation du markdown était pour cela limitant.
 
 Nous avons donc basculé les contenus dans une base de données postgreSQL et les avons exposés publiquement via une [API Rest](https://api.caen.camp/documentation).
 

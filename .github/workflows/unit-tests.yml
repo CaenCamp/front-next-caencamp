@@ -1,5 +1,10 @@
 name: Unit tests
-on: push
+on: 
+    push:
+        branches:
+            - main
+        paths-ignore:
+            - '**/README.md'
 jobs:
     jest:
         runs-on: ubuntu-20.04
