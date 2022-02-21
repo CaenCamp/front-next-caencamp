@@ -1,2 +1,9 @@
-User-agent: * 
-Disallow: /
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://beta.caen.camp/
+
+# Sitemaps
+Sitemap: https://beta.caen.camp/sitemap.xml
