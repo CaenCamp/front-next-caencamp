@@ -5,6 +5,7 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
+        "postbuild": "next-sitemap",
         "start": "next start",
         "test": "TZ=UTC jest --watch",
         "test:ci": "TZ=UTC jest",
@@ -68,6 +69,7 @@
         "jest": "27.4.7",
         "jest-axe": "5.0.1",
         "lint-staged": "12.1.7",
+        "next-sitemap": "2.4.3",
         "prettier": "2.5.1",
         "react-test-renderer": "17.0.2",
         "start-server-and-test": "1.14.0",
