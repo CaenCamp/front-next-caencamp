@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://beta.caen.camp/
+Host: https://caen.camp/
 
 # Sitemaps
-Sitemap: https://beta.caen.camp/sitemap.xml
+Sitemap: https://caen.camp/sitemap.xml
