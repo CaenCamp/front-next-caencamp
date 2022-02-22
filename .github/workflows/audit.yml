@@ -16,8 +16,6 @@ jobs:
               run: |
                   npm install
                   npm install -g @lhci/cli@0.8.x
-                  curl https://assets.greenframe.io/install.sh | bash
-                  greenframe version
             - name: Start serveur
               run: make audit-start-server
             - name: Lighthouse audit
@@ -28,10 +26,3 @@ jobs:
                   LHCI_SERVER_USER: ${{ secrets.LHCI_SERVER_USER }}
                   LHCI_TOKEN: ${{ secrets.LHCI_TOKEN }}
                   FORCE_COLOR: 3
-            - name: Greenframe audit
-              run: greenframe analyze
-              env:
-                  GREENFRAME_SECRET_TOKEN: ${{ secrets.GREENFRAME_SECRET_TOKEN }}
-                  FORCE_COLOR: 3
-            - name: Stop serveur
-              run: make audit-stop-server

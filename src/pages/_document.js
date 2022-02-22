@@ -23,7 +23,6 @@ class CaenCampDocument extends Document {
                         only all and (min--moz-device-pixel-ratio:0) and (display-mode:browser), (min--moz-device-pixel-ratio:0) and (display-mode:fullscreen)`}
                     />
                     <link rel="stylesheet" href="/css/print.min.css" media="print" />
-                    <meta name="robots" content="noindex" />
                 </Head>
                 <body>
                     <Main />
