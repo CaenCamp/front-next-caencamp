@@ -65,7 +65,7 @@ const CallForSpeakerForm = ({ handleValidSubmission = () => true }) => {
                     </span>
                 </label>
                 <div className="field-hint" id="hint-title">
-                    Exemple: Plutôt que de vous embêter avec TypeScript, choisissez un vrai langage typé !
+                    Exemple: Pourquoi s'embêter avec TypeScript, choisissez un vrai langage typé !
                 </div>
                 <input
                     type="text"
