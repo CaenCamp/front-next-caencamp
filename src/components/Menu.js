@@ -10,10 +10,11 @@ const getActiveMenu = pathname => {
         case '/':
             return 'home';
         case '/rencontres/[slug]':
-        case '/speakers/[slug]':
         case '/rencontres':
-        case '/speakers':
             return 'rencontres';
+        case '/speakers/[slug]':
+        case '/speakers':
+            return 'intervenants';
         default:
             return 'none';
     }
@@ -40,9 +41,9 @@ export const Menu = ({ router: { pathname } }) => {
                             <a className="nav-link">Les rencontres</a>
                         </Link>
                     </li>
-                    <li className="top-nav-item-cc">
-                        <Link href="/association">
-                            <a className="nav-link">L'association</a>
+                    <li className={`top-nav-item-cc${activeMenu === 'intervenants' ? ' selected' : ''}`}>
+                        <Link href="/speakers">
+                            <a className="nav-link">Les intervenants</a>
                         </Link>
                     </li>
                 </ul>

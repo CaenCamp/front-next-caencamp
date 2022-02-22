@@ -27,7 +27,7 @@ export const Breadcrumbs = ({ data, router }) => {
                     <div className="l-cluster">
                         <ol className="breadcrumbs clean-list">
                             <li>
-                                <a href="/rencontres">Les rencontres</a>
+                                <a href="/speakers">Les intervenants</a>
                             </li>
                             <li>
                                 <a href={router.asPath} aria-current="page">
