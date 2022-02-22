@@ -21,7 +21,7 @@ Vous pourrez trouver une vidéo de présentation de cette migration sur le site 
 
 ### Pré-requis
 
-Vous devez avoir [Node.js](https://nodejs.org/en/) en version 14 ([LTS](https://nodejs.org/en/about/releases/)) au minimum.
+Vous devez avoir [Node.js](https://nodejs.org/en/) en version 16 ([LTS](https://nodejs.org/en/about/releases/)) au minimum.
 
 ### Installation
 
