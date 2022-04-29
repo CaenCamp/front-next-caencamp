@@ -115,7 +115,7 @@ Le message du commit doit être structuré comme suit:
 Vous pouvez d'ailleur configurer un template de commit sur le projet en partant du [template d'exemple](../doc/commit.template.txt) présent dans la documentation.
 
 ```bash
-git config commit.template doc/commit.template.txt
+git config commit.template docs/commit.template.txt
 ```
 
 Nous utilisons un [hook de pre-commit](https://commitlint.js.org/) pour valider le format des messages de commit.
