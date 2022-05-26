@@ -1,9 +1,6 @@
 /* eslint jsx-a11y/anchor-is-valid: 0 */
-import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-
-import logo from '../../public/logoFondBlanc.png';
 
 const getActiveMenu = pathname => {
     switch (pathname) {
@@ -31,7 +28,7 @@ export const Menu = ({ router: { pathname } }) => {
             <div className="global-nav__inner l-center">
                 <a className={`logo-link${activeMenu === 'home' ? ' logo-selected' : ''}`} href="/">
                     <span className="logo">
-                        <Image width="101" height="52" src={logo} alt="Logo CaenCamp" role="img" />
+                        <img width="101" height="52" src="/logo-100px.png" alt="Logo CaenCamp" />
                     </span>
                     <span className="visuallyhidden">Acceuil du CaenCamp</span>
                 </a>

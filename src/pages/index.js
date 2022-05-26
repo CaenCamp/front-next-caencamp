@@ -1,11 +1,8 @@
 import { isPast } from 'date-fns';
 import Head from 'next/head';
-import Image from 'next/image';
 
 import CaenCampResume from '@/components/CaenCampResume';
 import { EventListItem } from '@/components/events/ListItem';
-
-import illustration from '../../public/illustrations/undraw_open_source_1qxw.svg';
 
 const API_URL = process.env.API_URL;
 
@@ -90,7 +87,10 @@ export default function Home({
                                 <CaenCampResume />
                             </div>
                             <div className="sidebar">
-                                <Image src={illustration} alt="CaenCamp collectif ouvert à tous.tes" />
+                                <img
+                                    src="/illustrations/undraw_open_source_1qxw.svg"
+                                    alt="CaenCamp collectif ouvert à tous.tes"
+                                />
                             </div>
                         </div>
                     </div>

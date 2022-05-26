@@ -1,10 +1,4 @@
-import Image from 'next/image';
 import Link from 'next/link';
-
-import githubLogo from '../../public/github.svg';
-import licence from '../../public/licence.png';
-import rssLogo from '../../public/rss.svg';
-import twitterLogo from '../../public/twitter.svg';
 
 export const Footer = () => (
     <footer className="global-footer">
@@ -26,9 +20,9 @@ export const Footer = () => (
                         <Link className="with-icon--larger" href="https://twitter.com/caencamp">
                             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                             <a>
-                                <Image
+                                <img
                                     className="icon icon--larger"
-                                    src={twitterLogo}
+                                    src="/twitter.svg"
                                     width="20"
                                     height="20"
                                     alt="Le CaenCamp sur Twitter"
@@ -42,9 +36,9 @@ export const Footer = () => (
                         <Link className="with-icon--larger" href="https://github.com/CaenCamp">
                             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                             <a>
-                                <Image
+                                <img
                                     className="icon icon--larger"
-                                    src={githubLogo}
+                                    src="/github.svg"
                                     width="20"
                                     height="20"
                                     alt="Le CaenCamp sur GitHub"
@@ -58,9 +52,9 @@ export const Footer = () => (
                         <Link className="with-icon--larger" href="https://www.meetup.com/fr-FR/CaenCamp/events/rss/">
                             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                             <a>
-                                <Image
+                                <img
                                     className="icon icon--larger"
-                                    src={rssLogo}
+                                    src="/rss.svg"
                                     width="20"
                                     height="20"
                                     alt="Le CaenCamp en RSS"
@@ -76,9 +70,9 @@ export const Footer = () => (
                 <Link className="with-icon--larger" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                     <a>
-                        <Image
+                        <img
                             className="icon icon--larger"
-                            src={licence}
+                            src="/licence.png"
                             width="88"
                             height="31"
                             alt="Licence CC BY-NC-SA"

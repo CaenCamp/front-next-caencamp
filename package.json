@@ -6,6 +6,7 @@
         "dev": "next dev",
         "build": "next build",
         "postbuild": "next-sitemap",
+        "export": "next build && next-sitemap && next export",
         "start": "next start",
         "test": "TZ=UTC jest --watch",
         "test:ci": "TZ=UTC jest",
