@@ -59,3 +59,6 @@ lighthouse: ## Start lighthouse audit (needs to have a started audit-server in a
 
 greenframe: ## Start greenframe audit (needs to have a started audit-server in another tab)
 	greenframe analyze
+
+deploy: ## Deploy static site
+	rsync -avz --delete out/ vm-freebox:/var/www/caencamp-static/
