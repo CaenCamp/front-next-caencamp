@@ -16,9 +16,11 @@ const terminalLog = violations => {
     cy.task('table', violationData);
 };
 
+const sizes = [[1920, 1080], 'macbook-13', 'iphone-6', 'ipad-2', 'ipad-mini', 'samsung-s10'];
+
 const testA11y = () => {
     cy.injectAxe();
-    for (const size of [[1920, 1080], 'macbook-13', 'iphone-6', 'ipad-2', 'ipad-mini', 'samsung-s10']) {
+    for (const size of sizes) {
         if (Cypress._.isArray(size)) {
             cy.viewport(size[0], size[1]);
         } else {
@@ -52,7 +54,7 @@ const pages = [
 ];
 
 describe('Site accessibility', () => {
-    it('should be accessible', () => {
+    it.skip('should be accessible', () => {
         for (const page of pages) {
             cy.visit(page);
             testA11y();

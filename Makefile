@@ -37,13 +37,6 @@ test-e2e-watch: build ## Start cypress tests with GUI
 test: test-unit test-e2e ## Start all tests
 	@echo "End of tests"
 
-# =====================
-# STORY BOOK ==========
-# =====================
-
-storybook: ## Start storybook
-	npm run storybook
-
 # =============================================
 # AUDIT (LIGHTHOUSE && GREENFRAME) ============
 # =============================================

@@ -60,7 +60,6 @@ const SearchFilters = ({
                                                 type="checkbox"
                                                 name="withVideo"
                                                 id="withVideo"
-                                                appearance="base"
                                                 onChange={handleOnlyWithVideoChange}
                                                 checked={onlyWithVideo}
                                             />
