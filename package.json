@@ -10,9 +10,9 @@
         "test": "TZ=UTC jest --watch",
         "test:ci": "TZ=UTC jest",
         "cypress": "cypress open",
-        "cypress:headless": "cypress run",
+        "cypress:headless": "cypress run --config-file=cypress.config.js",
         "e2e": "start-server-and-test start http://localhost:3111 cypress",
-        "e2e:headless": "start-server-and-test start http://localhost:3111 cypress:headless",
+        "e2e:headless": "start-server-and-test start http://localhost:3111 cypress:headless  --config-file=cypress.config.js",
         "prepare": "husky install",
         "linter": "eslint '*/**/*.{js,jsx}'",
         "linter:fix": "eslint '*/**/*.{js,jsx}' --fix"
