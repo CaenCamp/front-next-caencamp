@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-import logo from '../../public/logoFondBlanc.png';
+import logo from '../../public/logo-100px.png';
 
 const getActiveMenu = pathname => {
     switch (pathname) {
